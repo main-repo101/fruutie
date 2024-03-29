@@ -1,0 +1,15 @@
+/node-module/
+/build/
+/dist/
+/vendor/
+
+*secret
+*private.key
+*key
+*password
+passwrd
+
+env
+.env
+env.sample
+.env.sample
