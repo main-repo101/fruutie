@@ -2,13 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/img/icon/icon-logo-black.png" />
+    <link rel="icon" type="image/svg+xml" href="/src/resource/img/icon/icon-logo-black.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fruutie</title>
+    <script defer type="module" src="/src/com/fruutie/index.tsx"></script>
+    <script defer src="/repo/js/external/jquery/jquery-3.4.1.min.js"></script>
+    <script defer src="/repo/js/external/jquery/water-ripples/jquery.ripples-0.5.3.min.js"></script>
+    <script>
+      window.addEventListener("load", function() {
+        $(document).ready(function() {
+          $(".bg-water-ripples-effect").ripples({
+            resolution: 200,
+            perturbance: .005,
+          });
+          $(".card-water-ripples-effect").ripples({
+            resolution: 200,
+            perturbance: .05,
+          });
+          console.log(`::: Rippling effect loaded...?`);
+        });
+      });
+    </script>
   </head>
   <body class="w-[100vw] h-[100svh] 
     scroll-smooth overflow-x-hidden">
     <div id="root" class="w-[100%] h-[100%]"></div>
-    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

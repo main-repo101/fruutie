@@ -1,0 +1,73 @@
+
+//REM: MyComponent.tsx
+import React, { Component, ReactNode } from 'react';
+import { MyComponentProps } from './MyComponentProps';
+import { MyComponentState } from './MyComponentState';
+
+class MyComponent extends Component<MyComponentProps, MyComponentState> {
+  constructor(props: MyComponentProps) {
+    super(props);
+    this.state = {
+      text: props.initialText,
+    };
+  }
+
+  setText(newText: string): void {
+    this.setState({ text: newText });
+  }
+
+  render(): ReactNode {
+    const { text } = this.state;
+    return (
+      <div>
+        {text}
+      </div>
+    );
+  }
+}
+
+export default MyComponent;
+
+
+//REM: MyComponentProps.ts
+export interface MyComponentProps {
+  initialText: string;
+  x: number;
+  methodOneProp(x: number): number;
+}
+
+
+//REM: MyComponentState.ts
+export interface MyComponentState {
+  text: string;
+  methodOneState(): void;
+}
+
+
+//REM: MyComponentPropsImpl.ts
+import { MyComponentProps } from './MyComponentProps';
+
+export class MyComponentPropsImpl implements MyComponentProps {
+  constructor(public initialText: string, public x: number) {}
+
+  public methodOneProp(x: number): number {
+    return x + 1;
+  }
+}
+
+
+//REM: MyComponentStateImpl.ts
+import { MyComponentState } from './MyComponentState';
+
+export class MyComponentStateImpl implements MyComponentState {
+  constructor(public text: string) {}
+
+  public methodOneState(): void {
+    this.text += ' appended';
+    return;
+  }
+}
+
+
+//REM: index.ts or main.ts
+export { default } from './MyComponent';

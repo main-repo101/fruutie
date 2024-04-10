@@ -55,10 +55,15 @@ export default {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+#[2.2]REM: or do this
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 #[2.3]REM: Start using Tailwind in your React project put it to 
 #[2.3]REM: the 'className' of React reserve keyword
 #[2.3]REM: Such as in your '/src/App.{tsx,jsx}'
+import 'path/to/your/css/index-tailwindcss.css';
 export default function App() {
   return (
     <h1 className="text-3xl font-bold underline">
@@ -186,14 +191,14 @@ export default function App() {
 #[5.1]REM: '/src/component/layout/mainLayout.{jsx,tsx}'
 import { Outlet } from 'react-router-dom';
 import {PROJECT_ROOT_DIR} from '../../module-info.{jsx,tsx}';
-import navBar from `${PROJECT_RROT_DIR}/src/component/navBar.{jsx,tsx}`;
-import navBar from `${PROJECT_RROT_DIR}/src/component/footer.{jsx,tsx}`;
-export default function mainLayout() {
+import Header from `${PROJECT_RROT_DIR}/src/component/Header.{jsx,tsx}`;
+import Footer from `${PROJECT_RROT_DIR}/src/component/Footer.{jsx,tsx}`;
+export default function MainLayout() {
   return (
     <>
-      <navBar/>
+      <Header/>
       <Outlet/>
-      <footer/>
+      <Footer/>
     </>
   );
 }
