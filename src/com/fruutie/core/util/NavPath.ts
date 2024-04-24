@@ -87,6 +87,18 @@ export namespace com$fruutie$core$util {
             ID_ATTR: 'PRODUCT_CANDY_FRUIT',
             DESCRIPTION: 'Product Candy Fruit HASH_ID'
         });
+        public static readonly PRODUCT_HOT : Readonly<INavPath> = Object.freeze({
+            CODE: 0b1010_0000,
+            URL: '/product/more/hot-product',
+            ID_ATTR: 'MORE_PRODUCT_PAGE',
+            DESCRIPTION: 'Hot Product HASH_ID'
+        });
+        public static readonly PRODUCT_ON_SALE : Readonly<INavPath> = Object.freeze({
+            CODE: 0b1100_0000,
+            URL: '/product/more/on-sale',
+            ID_ATTR: 'MORE_PRODUCT_PAGE',
+            DESCRIPTION: 'On Sale Product HASH_ID'
+        });
     }
 }
 

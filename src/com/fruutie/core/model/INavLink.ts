@@ -8,3 +8,6 @@ export namespace com$fruutie$core$model {
         className: string;
     }
 }
+
+export type INavLink = com$fruutie$core$model.INavLink;
+export default INavLink;

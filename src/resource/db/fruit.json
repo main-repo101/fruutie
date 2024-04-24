@@ -1,0 +1,231 @@
+[
+    
+    {
+        "id": "f-0001",
+        "name": "Dried Durian",
+        "desciption": "N/A",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative"],
+        "img": {
+            "preview": null,
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": false,
+        "onSalePrice": 45,
+        "price": 85,
+        "unit": "lb",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0016",
+        "name": "Durian",
+        "desciption": "N/A",
+        "category": "JUICY_FRUIT",
+        "tag": ["juicy fruit", "water", "hot product"],
+        "img": {
+            "preview": "/assets/img/fruit/durian.jpg",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": true,
+        "amountStock": 98,
+        "isOnSale": false,
+        "onSalePrice": 45,
+        "price": 85,
+        "unit": "KG",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0017",
+        "name": "grapes",
+        "desciption": "N/A",
+        "category": "JUICY_FRUIT",
+        "tag": ["juicy fruit", "water", "hot product", "on sale"],
+        "img": {
+            "preview": "/assets/img/fruit/grapes.jpg",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": true,
+        "onSalePrice": 45,
+        "price": 85,
+        "unit": "KG",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0018",
+        "name": "Pineapple",
+        "desciption": "N/A",
+        "category": "JUICY_FRUIT",
+        "tag": ["juicy fruit", "water", "hot product"],
+        "img": {
+            "preview": "/assets/img/fruit/img-pineapple-640x960.jpg",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": false,
+        "onSalePrice": 45,
+        "price": 55,
+        "unit": "KG",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0019",
+        "name": "Pomegranate",
+        "desciption": "N/A",
+        "category": "JUICY_FRUIT",
+        "tag": ["juicy fruit", "water", "hot product", "on sale"],
+        "img": {
+            "preview": "/assets/img/fruit/img-pomegranate-002-640x960.jpg",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": true,
+        "onSalePrice": 45,
+        "price": 65,
+        "unit": "KG",
+        "producer": ["mr. Lyndon", "mr. Realiza"]
+    },
+    {
+        "id": "f-0020",
+        "name": "Pomegranate",
+        "desciption": "It is a fruit from <text here>. Made for your health...",
+        "category": "JUICY_FRUIT",
+        "tag": ["juicy fruit", "water", "on sale"],
+        "img": {
+            "preview": "/assets/img/fruit/img-pomegranate-640x960.jpg",
+            "info": "/assets/img/fruit/img-pomegranate-1920x1280.jpg",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": true,
+        "onSalePrice": 44.99,
+        "price": 65,
+        "unit": "KG",
+        "producer": ["Lor Khanyao Farm"]
+    },
+    {
+        "id": "f-0031",
+        "name": "Durian Candy",
+        "desciption": "N/A",
+        "category": "CANDY_FRUIT",
+        "tag": ["candy fruit", "synthetic preservative", "hot product", "on sale"],
+        "img": {
+            "preview": null,
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": true,
+        "onSalePrice": 25,
+        "price": 45,
+        "unit": "lb",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0046",
+        "name": "Dried Mango",
+        "desciption": "N/A",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
+        "img": {
+            "preview": null,
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": true,
+        "onSalePrice": 25,
+        "price": 35,
+        "unit": "lb",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0047",
+        "name": "Dried Grapes",
+        "desciption": "N/A",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
+        "img": {
+            "preview": null,
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": true,
+        "onSalePrice": 25,
+        "price": 42,
+        "unit": "lb",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0048",
+        "name": "Dried something",
+        "desciption": "N/A",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
+        "img": {
+            "preview": null,
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": true,
+        "amountStock": 98,
+        "isOnSale": true,
+        "onSalePrice": 25,
+        "price": 38,
+        "unit": "lb",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0032",
+        "name": "Mango Candy",
+        "desciption": "N/A",
+        "category": "CANDY_FRUIT",
+        "tag": ["candy fruit", "synthetic preservative"],
+        "img": {
+            "preview": null,
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": true,
+        "onSalePrice": 19.25,
+        "price": 25.50,
+        "unit": "lb",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0033",
+        "name": "Grape Candy",
+        "desciption": "N/A",
+        "category": "CANDY_FRUIT",
+        "tag": ["candy fruit", "test", "synthetic preservative"],
+        "img": {
+            "preview": null,
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 98,
+        "isOnSale": false,
+        "onSalePrice": 19.25,
+        "price": 25.50,
+        "unit": "lb",
+        "producer": ["N/A"]
+    }
+]

@@ -18,7 +18,9 @@ function main_layout(
     return (
         <>
             <div className="
-                w-[100%] min-h-fit ">
+                w-[100%] min-h-fit 
+                relative
+                bg-amber-50">
                 <HeaderSection 
                     username={username} 
                     title={title}

@@ -34,7 +34,10 @@ export function sign_in_page(
                     hover:border-amber-600
                     outline-none
                     focus:border-amber-600
-                    text-amber-800'>
+                    text-amber-800
+                    hover:scale-105
+                    hover:focus-within:scale-105
+                    ease-in-out duration-500'>
                 </input>
                 <input 
                     type='password'
@@ -47,7 +50,10 @@ export function sign_in_page(
                     hover:border-amber-600
                     outline-none
                     focus:border-amber-600
-                    text-amber-800'>
+                    text-amber-800
+                    hover:scale-105
+                    hover:focus-within:scale-105
+                    ease-in-out duration-500'>
                 </input>
                 <button type='submit'
                     className='border-2
@@ -58,9 +64,14 @@ export function sign_in_page(
                     hover:bg-amber-800
                     hover:text-white
                     ease-in-out
-                    duration-300'>
+                    w-[10rem]
+                    text-center
+                    duration-300 relative
+                    hover:scale-110
+                    hover:border-amber-600'>
                     Log in&nbsp;<span className='
-                        top-0 text-sm'>
+                        top-0 text-[0.7rem] absolute
+                        font-semibold italic'>
                         {title}
                         </span>
                 </button>

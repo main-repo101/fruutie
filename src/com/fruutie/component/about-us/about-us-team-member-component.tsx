@@ -9,9 +9,11 @@ export function about_us_team_member_component(): JSX.Element {
             text-[1.5rem] font-bol
             w-[100%] h-[50rem]">
             <h1 className='
-                font-bold'>TEAM MEMBERS</h1>
+                font-bold pt-4 pb-4
+                text-[2rem]
+                sm:text-[3rem]'>TEAM MEMBERS</h1>
             <ul className='
-                text-[1rem]
+                text-[1.5rem]
                 text-center'>
                 <li><a>Dumandan, Shiela Mae</a></li>
                 <li><a>Corpuz, Rodel A.</a></li>

@@ -1,0 +1,128 @@
+[
+    {
+        "id": "f-0046",
+        "name": "Dried Mango",
+        "desciption": "N/A",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
+        "img": {
+            "preview": "",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "onSale": true,
+        "onSalePrice": 25,
+        "price": 35,
+        "unit": "lb",
+        "producer": []
+    },
+    {
+        "id": "f-0047",
+        "name": "Dried Grapes",
+        "desciption": "N/A",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
+        "img": {
+            "preview": "",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "onSale": true,
+        "onSalePrice": 25,
+        "price": 42,
+        "unit": "lb",
+        "producer": []
+    },
+    {
+        "id": "f-0048",
+        "name": "Dried something",
+        "desciption": "N/A",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
+        "img": {
+            "preview": "",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": true,
+        "onSale": true,
+        "onSalePrice": 25,
+        "price": 38,
+        "unit": "lb",
+        "producer": []
+    },
+    {
+        "id": "f-0017",
+        "name": "grapes",
+        "desciption": "It is a fruit that ....",
+        "category": "JUICY_FRUIT",
+        "tag": ["juicy fruit", "water", "on sale"],
+        "img": {
+            "preview": "/assets/img/fruit/grapes.jpg",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "onSale": true,
+        "onSalePrice": 45,
+        "price": 85,
+        "unit": "KG",
+        "producer": ["mr. Corpuz"]
+    },
+    {
+        "id": "f-0019",
+        "name": "Pomegranate",
+        "desciption": "It is a fruit from <text here>. Coupled with premium fruit caliber and extensive customer approval.",
+        "category": "JUICY_FRUIT",
+        "tag": ["juicy fruit", "water", "on sale"],
+        "img": {
+            "preview": "/assets/img/fruit/img-pomegranate-002-640x960.jpg",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "onSale": true,
+        "onSalePrice": 45,
+        "price": 65,
+        "unit": "KG",
+        "producer": ["mr. Lyndon", "mr. Realiza"]
+    },
+    {
+        "id": "f-0020",
+        "name": "Pomegranate",
+        "desciption": "It is a fruit from <text here>. Made for your health...",
+        "category": "JUICY_FRUIT",
+        "tag": ["juicy fruit", "water", "on sale"],
+        "img": {
+            "preview": "/assets/img/fruit/img-pomegranate-640x960.jpg",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "onSale": true,
+        "onSalePrice": 44.99,
+        "price": 65,
+        "unit": "KG",
+        "producer": ["Lor Khanyao Farm"]
+    },
+    {
+        "id": "f-0031",
+        "name": "Durian Candy",
+        "desciption": "N/A",
+        "category": "CANDY_FRUIT",
+        "tag": ["candy fruit", "synthetic preservative", "on sale"],
+        "img": {
+            "preview": "",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "onSale": true,
+        "onSalePrice": 25,
+        "price": 45,
+        "unit": "lb",
+        "producer": []
+    }
+]

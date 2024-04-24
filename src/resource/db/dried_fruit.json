@@ -1,0 +1,20 @@
+[
+    {
+        "id": "f-0001",
+        "name": "Dried Durian?",
+        "desciption": "N/A",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative"],
+        "img": {
+            "preview": "",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "onSale": false,
+        "onSalePrice": 25,
+        "price": 35,
+        "unit": "lb",
+        "producer": []
+    }
+]

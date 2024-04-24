@@ -12,7 +12,7 @@ function about_us_page({title}:{title?:string|null}): JSX.Element {
         <>
             <div id='ABOUT_US_PAGE' className='flex 
                 flex-col gap-0 relative
-                w-[100%]
+                w-[100%] scroll-smooth
                 '>
                 <AboutUsIntroComponent />
                 <AboutUsMissionComponent />

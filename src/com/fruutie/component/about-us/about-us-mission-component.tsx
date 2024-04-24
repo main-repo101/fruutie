@@ -14,10 +14,14 @@ export function about_us_mission_component(): JSX.Element {
             pl-[10%] pr-[10%]">
             <div className="title-intro
             sm:flex-1 text-center
-            text-[2rem]
-            font-bold">Mission</div>
+            text-[3rem]
+            font-bold">
+                Mission
+            </div>
             <div className="message
-            sm:flex-1 text-justify">Our primary objective is to provide fast and secure fruit delivery, offering a wide variety of healthy products while ensuring a high-quality customer experience.
+            sm:flex-1 text-justify
+            text-xl
+            font-semibold">Our primary objective is to provide fast and secure fruit delivery, offering a wide variety of healthy products while ensuring a high-quality customer experience.
             </div>
         </div>
     </>;

@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import {
   Route,
   RouterProvider,
@@ -13,8 +12,10 @@ import AboutUsPage from './component/page/about-us-page.tsx';
 import PageNotFound from './component/page/error/page-not-found.tsx';
 import NavPath from './core/util/NavPath.ts';
 import SignInPage from './component/page/sign-in-page.tsx';
+import SelfProductPage from './component/page/self-product-page.tsx';
+import MoreProductPage from './component/page/more-product-page.tsx';
+import SearchProductPage from './component/page/search-product-page.tsx';
 function App( {title}:{ title?: string|null } ) {
-  // const [count, setCount] = useState(0)
   console.log(`::: /src/com/fruutie/App.tsx: title=${title}`);
 
   const JSX_ELEMENT_MAIN_LAYOUT: JSX.Element 
@@ -38,6 +39,9 @@ function App( {title}:{ title?: string|null } ) {
         <Route path={NavPath.SERVICE_PAGE.URL} element={JSX_ELEMENT_SERVICE_PAGE}/>
         <Route path={NavPath.ABOUT_US_PAGE.URL} element={JSX_ELEMENT_ABOUT_US_PAGE}/>
         <Route path={NavPath.SIGN_IN_PAGE.URL} element={JSX_ELEMENT_SIGN_IN_PAGE}/>
+        <Route path='/product/:name/:id' element={<SelfProductPage/>}/>
+        <Route path='/product/more/:groupProduct' element={<MoreProductPage/>}/>
+        <Route path='/search/:searchProduct' element={<SearchProductPage/>}/>
         <Route path='*' element={<PageNotFound title={title}/>}/>
       </Route>
     )

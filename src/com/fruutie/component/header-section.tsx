@@ -8,10 +8,13 @@ import IconProfile from '/src/resource/img/icon/icon-logo-white.png';
 
 import { com$fruutie$core } from '../core/com$fruutie$core.ts';
 import { scroll_to_section } from "../core/util/scroll-to-section.ts";
-
+import { useState } from "react";
+import NavBarMobileComponent from "./nav-bar-mobile-component.tsx";
 
 function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{username?:string|null, title?:string|null|undefined}): JSX.Element {
     console.log(`::: /src/com/fruutie/component/header-section.tsx: title=${title}`);
+    const [showCart, setShowCart] = useState(false);
+
     return (
         <>
             <div className='
@@ -42,7 +45,12 @@ function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{us
                     <div className="icon-cart cursor-pointer 
                         w-[1.6rem] h-[1. 6rem] relative
                         group/cart">
-                        <FaCartShopping className="w-[100%] h-[100%] relative
+                        <FaCartShopping 
+                            onClick={(e)=>{
+                                e.preventDefault();
+                                setShowCart(prevData=> !prevData );
+                            }}
+                            className="w-[100%] h-[100%] relative
                         hover:animate-pulse
                         hover:text-amber-950
                         group-hover/cart:scale-125
@@ -104,7 +112,10 @@ function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{us
                                     place-items-center
                                     transform">
                                     <NavLink 
-                                        onClick={()=>scroll_to_section('SIGN_IN_PAGE',200)}
+                                        onClick={()=>{
+                                            scroll_to_section('SIGN_IN_PAGE',200);
+                                            setShowCart(false);
+                                        }}
                                         to='/sign-in'
                                         className='pl-2 pr-2
                                         border-2 border-slate-800
@@ -113,7 +124,12 @@ function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{us
                                         hover:scale-110
                                         duration-300
                                         ease-in-out'>Sign-In</NavLink>
-                                    <NavLink to='/sign-up'
+                                    <NavLink 
+                                        onClick={()=>{
+                                            scroll_to_section('SIGN_UP_PAGE',200);
+                                            setShowCart(false);
+                                        }}
+                                        to='/sign-up'
                                         className='pl-2 pr-2
                                         border-2 border-slate-800
                                         rounded-full
@@ -132,12 +148,49 @@ function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{us
                     inline-flex
                     place-content-between
                     place-items-center">
-                    <LogoComponent/>
-                    <SearchComponent className='hidden 
-                    md:inline-flex'/>
+                    <LogoComponent />
+                    {/*REM: Refactor it... */}
+                    <SearchComponent 
+                        className='
+                        absolute
+                        top-[9rem]
+                        flex
+                        ml-[0.5rem]
+                        place-content-center
+                        place-items-center
+                        w-[80%]
+                        rounded-full
+                        bg-amber-100
+                        md:max-w-fit
+                        md:top-0
+                        md:static
+                        md:inline-flex
+                        ease-in-out duration-500'/>
                     <NavBarComponent className='hidden 
                     sm:inline-flex'/>
+                    <NavBarMobileComponent className='flex
+                    place-content-center
+                    place-items-center
+                    sm:hidden'/>
                 </div>
+            </div>
+            <div id="PNL_CART"
+                className={`flex flex-col
+                z-10
+                fixed
+                right-0
+                bg-amber-100/5
+                backdrop-blur-xl
+                border-l-4
+                border-amber-800
+                w-[100%]
+                sm:w-[30rem] 
+                xl:w-[40rem]
+                h-[100svh]
+                transition-all transform
+                ease-in-out duration-500
+                ${showCart ? `translate-x-[0rem]` : `translate-x-[50rem]`}`}>
+                    
             </div>
         </>
     );

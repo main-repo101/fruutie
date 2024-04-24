@@ -23,14 +23,14 @@ export function about_us_contact_us_component(
                 <FaPhone className='text-amber-950'/>
                 <label className='font-semibold'>Contact Number:</label> <span>111-2222-333</span>
             </div>
-                <div className="email
-                    inline-flex gap-2
-                    place-items-center">
-                    <FaEnvelope className='text-amber-950'/>
-                    <label 
-                        className='font-semibold'>Email:
-                    </label> <span>counter@fruutie.com</span>
-                </div>
+            <div className="email
+                inline-flex gap-2
+                place-items-center">
+                <FaEnvelope className='text-amber-950'/>
+                <label 
+                    className='font-semibold'>Email:
+                </label> <span>support@fruutie.com</span>
+            </div>
         </div>
     </>;
 }

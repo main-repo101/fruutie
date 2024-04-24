@@ -9,6 +9,7 @@ export function about_us_company_info_component(
     return <>
         <div id={NavPath.ABOUT_US_CONTACT_US.ID_ATTR}className="company-info
             flex flex-col 
+            gap-2
             w-[100%] h-[25rem]
             bg-amber-200
             place-content-center
@@ -22,39 +23,56 @@ export function about_us_company_info_component(
                 src={IconLogo}
                 className="company-logo
                 bg-contain rounded-full
-                w-[5rem] h-auto
+                w-[8rem] h-auto
                 border-2 border-amber-800
                 cursor-pointer
                 hover:title-logo
                 ease-in-out duration-500">
             </img>
             <div className="description
-                flex flex-col">
+                flex flex-col gap-4
+                text-xl">
                 <div className='text-center'>
-                    <label className='font-semibold'>Company Name:</label>
-                    <span className='text-xl font-semibold pl-2'>{title}</span>
-            </div>
+                    <label className='font-semibold'>
+                        Company Name:
+                    </label>
+                    <span className='text-xl font-semibold pl-2
+                        text-amber-950'>
+                        {title}
+                    </span>
+                </div>
                 <div className='text-center
-                    inline-flex gap-2
+                    inline-flex flex-wrap gap-2
                     place-content-center
-                    place-items-center'>
+                    place-items-center
+                    pt-4'>
                     <FaMapMarker className='text-amber-950'/>
                     <label className='font-semibold'>Location:</label>
-                    <span>Somewhere st. Here City</span>
+                    <span className='text-amber-950'>Somewhere st. Here City</span>
                 </div>
                 <div className="contact-number 
-                    inline-flex gap-2
-                    place-items-center">
+                    inline-flex flex-wrap gap-2
+                    place-items-center
+                    place-content-center">
                     <FaPhone className='text-amber-950'/>
-                    <label className='font-semibold'>Contact Number:</label> <span>111-2222-333</span>
-                    </div>
+                    <label className='font-semibold'>
+                        Contact Number:
+                        </label>
+                    <span className='text-amber-950'>
+                        111-2222-333
+                    </span>
+                </div>
                 <div className="email
-                    inline-flex gap-2
-                    place-items-center">
+                    inline-flex flex-wrap gap-2
+                    place-items-center
+                    place-content-center">
                     <FaEnvelope className='text-amber-950'/>
                     <label 
                         className='font-semibold'>Email:
-                    </label> <span>counter@fruutie.com</span>
+                    </label> 
+                    <span className='text-amber-950'>
+                        support@fruutie.com
+                    </span>
                 </div>
             </div>
         </div>
