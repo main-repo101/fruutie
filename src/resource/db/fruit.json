@@ -1,28 +1,561 @@
 [
-    
-    {
-        "id": "f-0001",
-        "name": "Dried Durian",
-        "desciption": "N/A",
+	{
+		"id": "f-0001",
+        "name": "Almonds",
+        "description": "The almond is the edible kernel of the fruit of the sweet almond tree. It is a bright white fruit wrapped in a reddishbrown cover. It is consumed as dry fruit, fried and/or salted.",
         "category": "DRIED_FRUIT",
-        "tag": ["dried fruit", "nonsynthetic preservative"],
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic", "hot product"],
         "img": {
-            "preview": null,
-            "info": "",
-            "alt": ""
+        		"preview": "/assets/img/fruit/dried/Almonds.jpg",
+        		"info": "",
+        		"alt": ""
         },
         "isOutOfStock": false,
-        "amountStock": 98,
+        "amountStock": 15,
         "isOnSale": false,
         "onSalePrice": 45,
         "price": 85,
         "unit": "lb",
-        "producer": ["N/A"]
+        "producer": ["Tabinas Farm"]
+	},
+	{
+		"id": "f-0002",
+        "name": "Apricot",
+        "description": "The fruits are drupes with a large flat pit, or stone, within which is the seed. ",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        "img": {
+        		"preview": "/assets/img/fruit/dried/apricot.jpg",
+        		"info": "",
+        		"alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 22.99,
+        "price": 39,
+        "unit": "lb",
+        "producer": ["Lor Farm"]
+	},{
+		"id": "f-0003",
+        "name": "Cherry",
+        "description": "The perfect Cherry is rounded with a slight heart shape and dimple at its stem end.",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        "img": {
+        		"preview": "/assets/img/fruit/dried/cherry.jpg",
+        		"info": "",
+        		"alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 15,
+        "price": 35,
+        "unit": "lb",
+        "producer": ["Lor Farm"]
+	},
+	{
+		"id": "f-0004",
+        "name": "Charolli",
+        "description": "Charoli Dry Fruits are tiny almond-flavoured dried seeds of a bush called Buchanania lanzan, which is cultivated across India, primarily in the northwest.",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        "img": {
+        		"preview": "/assets/img/fruit/dried/charolli.jpg",
+        		"info": "",
+        		"alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 250,
+        "price": 500,
+        "unit": "lb",
+        "producer": ["Ruiz Farm"]
+	},
+	{
+		"id": "f-0005",
+        "name": "Dates",
+        "description": "The date is a one-seeded fruit, or drupe, usually oblong but varying much in shape, size, colour, quality, and consistency of flesh.",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        "img": {
+        		"preview": "/assets/img/fruit/dried/dates.jpg",
+        		"info": "",
+        		"alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 65,
+        "price": 150,
+        "unit": "lb",
+        "producer": ["Ang Farm"]
+	},
+	{
+		"id": "f-0006",
+        	"name": "Dried Coconut",
+        	"description": "Dry Coconut is a hard brown shell with a hairy appearance surrounding the flesh.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/driedcoconut.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 10,
+        	"price": 25,
+        	"unit": "lb",
+        	"producer": ["Tabinas Farm"]
+	},{
+		"id": "f-0007",
+        	"name": "Dried Raisin",
+        	"description": "Raisins are dried grapes. The drying process concentrates both the nutrients and sugars in grapes, making raisins nutrient-dense and calorie-dense.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/driedraisin.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 20,
+        	"price": 40,
+        	"unit": "lb",
+        	"producer": ["Jayo Farm"]
+	},
+	{
+		"id": "f-0008",
+        	"name": "Figs",
+        	"description": "Figs are, therefore, soft fruits, with a thin skin whose colour varies from green to purple, while the flesh is red or white.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/figs.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 30,
+        	"price": 70,
+        	"unit": "lb",
+        	"producer": ["Lor Farm"]
+	},
+	{
+		"id": "f-0009",
+        	"name": "Flax",
+        	"description": "flaxseeds are the seed of the flax plant. This plant has a long history both in the textile and food worlds.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic", "hot product"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/flax.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 22,
+        	"price": 45,
+        	"unit": "lb",
+        	"producer": ["Ruiz Farm"]
+	},
+	{
+		"id": "f-0010",
+        	"name": "Golden Sesame",
+        	"description": "The raw seeds of Golden Sesame resemble the toasted seeds of white sesame.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/golden-sesame-250-g.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 78,
+        	"price": 125,
+        	"unit": "lb",
+        	"producer": ["Corpuz Farm"]
+	},
+	{
+		"id": "f-0011",
+        	"name": "Ground Nut",
+        	"description": "Groundnuts are small erect or trailing herbaceous legumes, about 15 to 60 cm high.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/ground nut.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 423,
+        	"price": 785,
+        	"unit": "lb",
+        	"producer": ["Dumadag Farm"]
+	},
+	{
+		"id": "f-0012",
+        	"name": "Pine Nut",
+        	"description": "Pine Nuts, also known as Pignoli, are the edible seeds of the pine tree.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/pine nut.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 33,
+        	"price": 75,
+        	"unit": "lb",
+        	"producer": ["Corpuz Farm"]
+	},
+	{
+		"id": "f-0013",
+        	"name": "Prunes",
+        	"description": "A prune is a dried plum, most commonly from the European plum (Prunus domestica) tree.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/prunes.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 110,
+        	"price": 220,
+        	"unit": "lb",
+        	"producer": ["Dumadag Farm"]
+	},
+	{
+		"id": "f-0014",
+        	"name": "Raisin",
+        	"description": "A raisin is a dehydrated or sun-dried grape. Raisins are sweet and chewy, and they're often found in oatmeal cookies and granola.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/Raisin.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 13,
+        	"price": 26,
+        	"unit": "lb",
+        	"producer": ["Lor Farm"]
+	},
+	{
+		"id": "f-0015",
+        "name": "Wallnuts",
+        "description": "Walnuts are the round, single-seed stone fruits of the walnut tree.",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        "img": {
+        		"preview": "/assets/img/fruit/dried/wallnuts.jpg",
+        		"info": "",
+        		"alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 78,
+        "price": 165,
+        "unit": "lb",
+        "producer": ["Lor Farm"]
+	},
+    {
+      "id": "f-0016",
+      "name": "Pineapple",
+      "description": "The pineapple has a tough rind made up of hexagonal units and a fibrous, juicy flesh which may be yellow to white in color.",
+      "category": "JUICY_FRUIT",
+      "tag":["sweet","tangy", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/pineapple.jpg",
+           "info": "Pineapple is excellent, whether eaten as a snack, in a sweet dessert, in savory dishes like fried rice, or even on pizza.",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": true,
+      "onSalePrice": 70,
+      "price": 161,
+      "unit": "KG",
+      "producer":["N/A"]        
     },
     {
-        "id": "f-0016",
+      "id": "f-0017",
+      "name": "Orange",
+      "description": "Oranges are citrus fruits with fragrant, leathery skin and juicy flesh.",
+      "category": "JUICY_FRUIT",
+      "tag":["sweet", "tangy", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/orange.jpg",
+           "info": "",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 96,
+      "price": 100,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0018",
+      "name": "Kiwi",
+      "description": "Kiwifruit is a small meaty green fruit with a high content of small black seeds, covered with a fuzzy brown skin, with the exception of mini kiwifruit that is characterized by a smooth, comestible and non-hairy peel.",
+      "category": "JUICY_FRUIT",
+      "tag":["sweet", "sour", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/kiwi.jpg",
+           "info": "",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 0,
+      "price": 55,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0019",
+      "name": "Watermelon",
+      "description": "A watermelon is a large, oval fruit with green skin; sweet, juicy pulp and seeds. ",
+      "category": "JUICY_FRUIT",
+      "tag":["sweet", "sour", "bitter", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/watermelon.jpg",
+           "info": "Watermelon is grown in favorable climates from tropical to temperate regions worldwide for its large edible fruit.",
+           "alt": ""
+      },
+      "isOutOfStock": true,
+      "isOnSale": false,
+      "onSalePrice": 0,
+      "price": 87,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0020",
+      "name": "Apple",
+      "description": "The apple is one of the pome fleshy fruits. Apples at harvest vary widely in size, shape, colour, and acidity, but most are fairly round and some shade of red or yellow. ",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy fruit", "sweet", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/apple.jpg",
+           "info": "",
+           "alt": ""
+      },
+      "isOutOfStock": true,
+      "isOnSale": false,
+      "onSalePrice": 32,
+      "price": 74,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0021",
+      "name": "Avocado",
+      "description": "Avocado is a bright green fruit with a large pit and dark leathery skin",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy fruit", "water", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/avocado.jpg",
+           "info": "",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": true,
+      "onSalePrice": 35,
+      "price": 72,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0022",
+      "name": "Strawberry",
+      "description": "A strawberry is a small red fruit which is soft and juicy and has tiny yellow seeds on its skin.",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "sweet", "slight acidic tang", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/strawberry.jpg",
+           "info": "Strawberries are a good source of vitamin C, manganese, folate (vitamin B9), and potassium.",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 0,
+      "price": 150,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0023",
+      "name": "Peach",
+      "description": "A peach is a very sweet, juicy fruit with an edible peel and a hard pit in the middle. ",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "very sweet", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/peach.jpg",
+           "info": "Peaches vary in color from almost white to yellow and pinkish-red. Peaches grow on trees in temperate climates — they need warm weather, but they also require a hard freeze in the winter to produce fruit.",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 69,
+      "price": 95,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0024",
+      "name": "Mango",
+      "description": "A mango is a popular tropical fruit that is eaten in sweet and savory dishes around the world. ",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "sweet", "sour", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/mango.jpg",
+           "info": "The mango fruit has green skin that gradually turns yellow, orange, purple, red, or combinations of these colors as the fruit matures.",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 0,
+      "price": 60,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0025",
+      "name": "Lychee",
+      "description": "Lychee fruit is a small round fruit with red scaly skin, sweet juicy pulp, and one large seed.",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "sweet", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/lychee.jpg",
+           "info": "It's a popular fruit in Asia and found in many desserts and drinks like jellies, cocktails, and ice creams.",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 80,
+      "price": 120,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0026",
+      "name": "Lemon",
+      "description": "Lemon is a hybrid citrus that produces bright yellow fruits that have a tart, acidic taste. ",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "sour", "bitter", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/lemon.jpg",
+           "info": "",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": true,
+      "onSalePrice": 29,
+      "price": 47,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0027",
+      "name": "Grapes",
+      "description": "Grapes are fleshy, rounded fruits that grow in clusters made up of many fruits of greenish, yellowish or purple skin.",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "sweet", "sour", "bitter", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/grapes.jpg",
+           "info": "Grapes contain such minerals as calcium and phosphorus and are a source of vitamin A.",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 122,
+      "price": 168,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0028",
+      "name": "Cherries",
+      "description": "The cherry is a fruit that is consumed fresh or in cakes, mousses, jams and fruit stews.",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "sweet-tart", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/cherries.jpg",
+           "info": "",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 46,
+      "price": 63,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0029",
+      "name": "Blackberries",
+      "description": "Blackberry fruit is in the shape of a berry. The berries change their colour from green to red to black as it matures.",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "sweet-tart", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/blackberries.jpg",
+           "info": "The fruit is grown commercially for jellies, preserves, and desserts and may also be used to produce blackberry wine or vinegar.",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 0,
+      "price": 58,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+      "id": "f-0030",
+      "name": "Pear",
+      "description": "A pear is a sweet, juicy fruit which is narrow near its stalk, and wider and rounded at the bottom. Pears have white flesh and thin green or yellow skin.",
+      "category": "JUICY_FRUIT",
+      "tag":["juicy", "sweet", "juicy fruit"],
+      "img": {
+           "preview": "/assets/img/fruit/juicy/pear.jpg",
+           "info": "",
+           "alt": ""
+      },
+      "isOutOfStock": false,
+      "isOnSale": false,
+      "onSalePrice": 0,
+      "price": 49,
+      "unit": "KG",
+      "producer":["N/A"]     
+    },
+    {
+        "id": "f-0016a",
         "name": "Durian",
-        "desciption": "N/A",
+        "description": "N/A",
         "category": "JUICY_FRUIT",
         "tag": ["juicy fruit", "water", "hot product"],
         "img": {
@@ -39,9 +572,9 @@
         "producer": ["N/A"]
     },
     {
-        "id": "f-0017",
+        "id": "f-0017a",
         "name": "grapes",
-        "desciption": "N/A",
+        "description": "N/A",
         "category": "JUICY_FRUIT",
         "tag": ["juicy fruit", "water", "hot product", "on sale"],
         "img": {
@@ -58,9 +591,9 @@
         "producer": ["N/A"]
     },
     {
-        "id": "f-0018",
+        "id": "f-0018a",
         "name": "Pineapple",
-        "desciption": "N/A",
+        "description": "N/A",
         "category": "JUICY_FRUIT",
         "tag": ["juicy fruit", "water", "hot product"],
         "img": {
@@ -77,9 +610,9 @@
         "producer": ["N/A"]
     },
     {
-        "id": "f-0019",
+        "id": "f-0019a",
         "name": "Pomegranate",
-        "desciption": "N/A",
+        "description": "This fruit can heal your ...",
         "category": "JUICY_FRUIT",
         "tag": ["juicy fruit", "water", "hot product", "on sale"],
         "img": {
@@ -96,9 +629,9 @@
         "producer": ["mr. Lyndon", "mr. Realiza"]
     },
     {
-        "id": "f-0020",
+        "id": "f-0020a",
         "name": "Pomegranate",
-        "desciption": "It is a fruit from <text here>. Made for your health...",
+        "description": "It is a fruit from <text here>. Made for your health...",
         "category": "JUICY_FRUIT",
         "tag": ["juicy fruit", "water", "on sale"],
         "img": {
@@ -116,8 +649,301 @@
     },
     {
         "id": "f-0031",
+        "name": "Chocolate Candy",
+        "description": "Rich Indulgence",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit", "synthetic preservative"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/chocolate.jpg",
+            "info": "Indulge in rich indulgence with this delectable chocolate candy, perfect for satisfying your sweet cravings.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 25,
+        "price": 45,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0032",
+        "name": "Coconut Candy",
+        "description": "Tropical Bliss",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit", "synthetic preservative"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/coconut.jpg",
+            "info": "Experience a taste of the tropics with this coconut candy, offering a tropical bliss in every bite.",
+            "alt": ""
+        },
+        "isOutOfStock": true,
+        "isOnSale": true,
+        "onSalePrice": 25,
+        "price": 38,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0033",
         "name": "Durian Candy",
-        "desciption": "N/A",
+        "description": "Bold Experience",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/durian.jpg",
+            "info": "Embark on a bold experience with this durian candy, crafted for those who enjoy adventurous flavors.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 25,
+        "price": 50,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+
+    {
+        "id": "f-0034",
+        "name": "Grapes Candy",
+        "description": "candy Burst",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit", "on sale"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/grapes.jpg",
+            "info": "Enjoy a candy burst of flavor with these grapes candies, offering a delightful sweetness in every piece.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": true,
+        "onSalePrice": 16.25,
+        "price": 30,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0035",
+        "name": "Jackfruit Candy",
+        "description": "Exotic Sweetness",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/jackfruit.jpg",
+            "info": "Dive into an exotic sweetness with these jackfruit candies, capturing the essence of tropical indulgence.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 35,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0036",
+        "name": "Kiwi Candy",
+        "description": "Tangy Delight",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/kiwi.jpg",
+            "info": "Savor the tangy delight of kiwi with these candies, delivering a refreshing burst of fruity flavor.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 40,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0037",
+        "name": "Lychee Candy",
+        "description": "Sweet Sensation",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/Lychee.jpg",
+            "info": "Delight in the sweet sensation of lychee with these candies, offering a taste of tropical paradise.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 42,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+
+    {
+        "id": "f-0038",
+        "name": "Mango Candy",
+        "description": "Tropical Treat",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/mango.jpg",
+            "info": "Treat yourself to a tropical treat with these mango candies, bursting with the luscious sweetness of ripe mangoes.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 48,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0039",
+        "name": "Melon Candy",
+        "description": "Refreshing Sweetness",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/melon.jpg",
+            "info": "Experience a refreshing sweetness with these melon candies, perfect for a burst of fruity flavor on the go.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 36,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0040",
+        "name": "Orange Candy",
+        "description": "Citrus Burst",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/orange.jpg",
+            "info": "Enjoy a citrus burst of flavor with these orange candies, offering a zesty twist to your snacking experience.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 32,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0041",
+        "name": "Peach Candy",
+        "description": "Fuzzy Sweetness",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/peach.jpg",
+            "info": "Indulge in fuzzy sweetness with these peach candies, capturing the essence of ripe, candy peaches in every bite.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 34,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+
+    {
+        "id": "f-0042",
+        "name": "Peanut Candy",
+        "description": "Crunchy Sweetness",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/peanut.jpg",
+            "info": "Crunch into crunchy sweetness with these peanut candies, offering a delightful blend of nutty and sweet flavors.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 28,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0043",
+        "name": "Pear Candy",
+        "description": "Crisp Sweetness",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/pear.jpg",
+            "info": "Experience crisp sweetness with these pear candies, delivering a refreshing taste reminiscent of freshly picked pears.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 33,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0044",
+        "name": "Pineapple Candy",
+        "description": "Tropical Sweetness. Dive into tropical sweetness with these pineapple candies, offering a taste of island paradise in every piece.",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/pineapple.jpg",
+            "info": "",
+            "alt": ""
+        },
+        "isOutOfStock": true,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 39,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0045",
+        "name": "Strawberry Candy",
+        "description": "Berry Sweetness",
+        "category": "CANDY_FRUIT",
+        "tag": ["sweet", "candy fruit"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/strawberry.jpg",
+            "info": "Enjoy berry sweetness with these strawberry candies, bursting with the candy flavor of ripe strawberries.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 31,
+        "unit": "g",
+        "producer": ["N/A"]
+    },
+    {
+        "id": "f-0046",
+        "name": "Tamarind Candy",
+        "description": "Tangy Delight",
+        "category": "CANDY_FRUIT",
+        "tag": ["sour"],
+        "img": {
+            "preview": "/assets/img/fruit/candy/tamarind.jpg",
+            "info": "Savor tangy delight with these tamarind candies, offering a unique twist of sourness and sweetness in every piece.",
+            "alt": ""
+        },
+        "isOutOfStock": false,
+        "isOnSale": false,
+        "onSalePrice": 0,
+        "price": 37,
+        "unit": "g",
+        "producer": ["N/A"]
+    }
+    
+    ,
+    {
+        "id": "f-0050",
+        "name": "Durian Candy",
+        "description": "N/A",
         "category": "CANDY_FRUIT",
         "tag": ["candy fruit", "synthetic preservative", "hot product", "on sale"],
         "img": {
@@ -134,9 +960,9 @@
         "producer": ["N/A"]
     },
     {
-        "id": "f-0046",
+        "id": "f-0049",
         "name": "Dried Mango",
-        "desciption": "N/A",
+        "description": "N/A",
         "category": "DRIED_FRUIT",
         "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
         "img": {
@@ -144,18 +970,18 @@
             "info": "",
             "alt": ""
         },
-        "isOutOfStock": false,
+        "isOutOfStock": true,
         "amountStock": 98,
-        "isOnSale": true,
+        "isOnSale": false,
         "onSalePrice": 25,
         "price": 35,
         "unit": "lb",
         "producer": ["N/A"]
     },
     {
-        "id": "f-0047",
+        "id": "f-0048",
         "name": "Dried Grapes",
-        "desciption": "N/A",
+        "description": "N/A",
         "category": "DRIED_FRUIT",
         "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
         "img": {
@@ -172,28 +998,9 @@
         "producer": ["N/A"]
     },
     {
-        "id": "f-0048",
-        "name": "Dried something",
-        "desciption": "N/A",
-        "category": "DRIED_FRUIT",
-        "tag": ["dried fruit", "nonsynthetic preservative", "on sale"],
-        "img": {
-            "preview": null,
-            "info": "",
-            "alt": ""
-        },
-        "isOutOfStock": true,
-        "amountStock": 98,
-        "isOnSale": true,
-        "onSalePrice": 25,
-        "price": 38,
-        "unit": "lb",
-        "producer": ["N/A"]
-    },
-    {
-        "id": "f-0032",
+        "id": "f-0051",
         "name": "Mango Candy",
-        "desciption": "N/A",
+        "description": "N/A",
         "category": "CANDY_FRUIT",
         "tag": ["candy fruit", "synthetic preservative"],
         "img": {
@@ -210,13 +1017,13 @@
         "producer": ["N/A"]
     },
     {
-        "id": "f-0033",
+        "id": "f-0051",
         "name": "Grape Candy",
-        "desciption": "N/A",
+        "description": "N/A",
         "category": "CANDY_FRUIT",
         "tag": ["candy fruit", "test", "synthetic preservative"],
         "img": {
-            "preview": null,
+            "preview": "",
             "info": "",
             "alt": ""
         },

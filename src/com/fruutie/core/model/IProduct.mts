@@ -4,18 +4,19 @@ export namespace com$fruutie$core$model {
     export interface IProduct { 
         id: string; 
         name: string; 
-        desciption: string; 
+        description: string; 
         category: string; 
         tag: string[]; 
-        img: { preview: string | null; 
+        img: { 
+            preview: string | null; 
             info: string | null; 
             alt: string | null; 
         }; 
         isOutOfStock: boolean; 
-        amountStock: number; 
+        amountStock?: number; 
         isOnSale: boolean; 
-        onSalePrice: number; 
-        price: number; 
+        onSalePrice: Number; 
+        price: Number; 
         unit: string; 
         producer: string[]; 
     }

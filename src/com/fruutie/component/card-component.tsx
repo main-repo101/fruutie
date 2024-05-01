@@ -108,7 +108,7 @@ export function card_component(
                         text-white
                         font-semibold
                         border-2 border-amber-800
-                        ${!isOnSale? `hidden` : ``}
+                        ${!isOnSale || isOutOfStock? `hidden` : ``}
                         ${!isOutOfStock? `sm:group-hover/card-img:-top-[4rem]` : ``}`}>
                         Sale
                     </div>

@@ -196,5 +196,5 @@ function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{us
     );
 }
 
-const HeaderSection = header_section;
+const  HeaderSection = header_section;
 export default HeaderSection;

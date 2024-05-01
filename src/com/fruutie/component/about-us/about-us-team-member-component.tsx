@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import NavPath from "../../core/util/NavPath";
+import { FaUserCircle } from "react-icons/fa";
 
 export function about_us_team_member_component(): JSX.Element {
     return <>
@@ -14,14 +16,39 @@ export function about_us_team_member_component(): JSX.Element {
                 sm:text-[3rem]'>TEAM MEMBERS</h1>
             <ul className='
                 text-[1.5rem]
-                text-center'>
-                <li><a>Dumandan, Shiela Mae</a></li>
-                <li><a>Corpuz, Rodel A.</a></li>
-                <li><a>Lor, Khanyao</a></li>
-                <li><a>Ang, Roswell</a></li>
-                <li><a>Ruiz, Shewii May</a></li>
-                <li><a>Tabinas, Lyndon</a></li>
-                <li><a>Jayo, Adonis Raphael B.</a></li>
+                text-center
+                flex flex-col
+                gap-4
+                font-semibold 
+                place-content-around'>
+                <li><Link to="#" className="flex flex-row gap-2
+                    place-items-center">
+                    <FaUserCircle className="h-[5rem] w-[5rem]
+                        text-amber-950"/>S. M. Dumandan</Link></li>
+                <li><Link to="#" className="flex flex-row gap-2
+                    place-items-center">
+                    <FaUserCircle className="h-[5rem] w-[5rem]
+                        text-amber-950"/>R. Corpuz</Link></li>
+                <li><Link to="#" className="flex flex-row gap-2
+                    place-items-center">
+                    <FaUserCircle className="h-[5rem] w-[5rem]
+                        text-amber-950"/>K. Lor</Link></li>
+                <li><Link to="#" className="flex flex-row gap-2
+                    place-items-center">
+                    <FaUserCircle className="h-[5rem] w-[5rem]
+                        text-amber-950"/>R. Ang</Link></li>
+                <li><Link to="#" className="flex flex-row gap-2
+                    place-items-center">
+                    <FaUserCircle className="h-[5rem] w-[5rem]
+                        text-amber-950"/>S. M. Ruiz</Link></li>
+                <li><Link to="#" className="flex flex-row gap-2
+                    place-items-center">
+                    <FaUserCircle className="h-[5rem] w-[5rem]
+                        text-amber-950"/>L. Tabinas</Link></li>
+                <li><Link to="#" className="flex flex-row gap-2
+                    place-items-center">
+                    <FaUserCircle className="h-[5rem] w-[5rem]
+                        text-amber-950"/>A. R. B. Jayo</Link></li>
             </ul>
         </div>
     </>;

@@ -6,7 +6,7 @@
         "category": "JUICY_FRUIT",
         "tag": ["juicy fruit", "water"],
         "img": {
-            "preview": "/assets/img/fruit/durian.jpg",
+            "preview": "/assets/img/fruit/juicy/apple.jpg",
             "info": "",
             "alt": ""
         },
@@ -24,7 +24,7 @@
         "category": "JUICY_FRUIT",
         "tag": ["juicy fruit", "water"],
         "img": {
-            "preview": "/assets/img/fruit/grapes.jpg",
+            "preview": "/assets/img/fruit/juicy/avocado.jpg",
             "info": "",
             "alt": ""
         },
@@ -32,42 +32,6 @@
         "onSale": true,
         "onSalePrice": 45,
         "price": 85,
-        "unit": "KG",
-        "producer": []
-    },
-    {
-        "id": "f-0018",
-        "name": "Pineapple",
-        "desciption": "N/A",
-        "category": "JUICY_FRUIT",
-        "tag": ["juicy fruit", "water"],
-        "img": {
-            "preview": "/assets/img/fruit/img-pineapple-640x960.jpg",
-            "info": "",
-            "alt": ""
-        },
-        "isOutOfStock": false,
-        "onSale": false,
-        "onSalePrice": 0,
-        "price": 0,
-        "unit": "KG",
-        "producer": []
-    },
-    {
-        "id": "f-0019",
-        "name": "Pomegranate",
-        "desciption": "N/A",
-        "category": "JUICY_FRUIT",
-        "tag": ["juicy fruit", "water"],
-        "img": {
-            "preview": "/assets/img/fruit/img-pomegranate-002-640x960.jpg",
-            "info": "",
-            "alt": ""
-        },
-        "isOutOfStock": false,
-        "onSale": true,
-        "onSalePrice": 45,
-        "price": 65,
         "unit": "KG",
         "producer": []
     }

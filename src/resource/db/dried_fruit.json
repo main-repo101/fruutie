@@ -1,20 +1,286 @@
+
 [
-    {
-        "id": "f-0001",
-        "name": "Dried Durian?",
-        "desciption": "N/A",
+	{
+		"id": "f-0001",
+        	"name": "Almonds",
+        	"desciption": "The almond is the edible kernel of the fruit of the sweet almond tree. It is a bright white fruit wrapped in a reddish brown cover. It is consumed as dry fruit, fried and/or salted.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/almonds.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 45,
+        	"price": 85,
+        	"unit": "lb",
+        	"producer": ["Tabinas Farm"]
+	},
+	{
+		"id": "f-0002",
+        	"name": "Apricot",
+        	"desciption": "The fruits are drupes with a large flat pit, or stone, within which is the seed. ",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/apricot.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 22.99,
+        	"price": 39,
+        	"unit": "lb",
+        	"producer": ["Lor Farm"]
+	},{
+		"id": "f-0003",
+        	"name": "Cherry",
+        	"desciption": "The perfect Cherry is rounded with a slight heart shape and dimple at its stem end.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/cherry.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 15,
+        	"price": 35,
+        	"unit": "lb",
+        	"producer": ["Lor Farm"]
+	},
+	{
+		"id": "f-0004",
+        	"name": "Charolli",
+        	"desciption": "Charoli Dry Fruits are tiny almond-flavoured dried seeds of a bush called Buchanania lanzan, which is cultivated across India, primarily in the northwest.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/charolli.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 250,
+        	"price": 500,
+        	"unit": "lb",
+        	"producer": ["Ruiz Farm"]
+	},
+	{
+		"id": "f-0005",
+        	"name": "Dates",
+        	"desciption": "The date is a one-seeded fruit, or drupe, usually oblong but varying much in shape, size, colour, quality, and consistency of flesh.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/dates.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 65,
+        	"price": 150,
+        	"unit": "lb",
+        	"producer": ["Ang Farm"]
+	},
+	{
+		"id": "f-0006",
+        	"name": "Dried Coconut",
+        	"desciption": "Dry Coconut is a hard brown shell with a hairy appearance surrounding the flesh.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/driedcoconut.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 10,
+        	"price": 25,
+        	"unit": "lb",
+        	"producer": ["Tabinas Farm"]
+	},{
+		"id": "f-0007",
+        	"name": "Dried Raisin",
+        	"desciption": "Raisins are dried grapes. The drying process concentrates both the nutrients and sugars in grapes, making raisins nutrient-dense and calorie-dense.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/driedraisin.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 20,
+        	"price": 40,
+        	"unit": "lb",
+        	"producer": ["Jayo Farm"]
+	},
+	{
+		"id": "f-0008",
+        	"name": "Figs",
+        	"desciption": "Figs are, therefore, soft fruits, with a thin skin whose colour varies from green to purple, while the flesh is red or white.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/figs.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 30,
+        	"price": 70,
+        	"unit": "lb",
+        	"producer": ["Lor Farm"]
+	},
+	{
+		"id": "f-0009",
+        	"name": "Flax",
+        	"desciption": "flaxseeds are the seed of the flax plant. This plant has a long history both in the textile and food worlds.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/flax.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 22,
+        	"price": 45,
+        	"unit": "lb",
+        	"producer": ["Ruiz Farm"]
+	},
+	{
+		"id": "f-0010",
+        	"name": "Golden Sesame",
+        	"desciption": "The raw seeds of Golden Sesame resemble the toasted seeds of white sesame.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/golden-sesame-250-g.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 78,
+        	"price": 125,
+        	"unit": "lb",
+        	"producer": ["Corpuz Farm"]
+	},
+	{
+		"id": "f-0011",
+        	"name": "Ground Nut",
+        	"desciption": "Groundnuts are small erect or trailing herbaceous legumes, about 15 to 60 cm high.",
+        	"category": "DRIED_FRUIT",
+        	"tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        	"img": {
+            		"preview": "/assets/img/fruit/dried/ground nut.jpg",
+            		"info": "",
+            		"alt": ""
+        	},
+        	"isOutOfStock": false,
+        	"amountStock": 15,
+        	"isOnSale": false,
+        	"onSalePrice": 423,
+        	"price": 785,
+        	"unit": "lb",
+        	"producer": ["Dumadag Farm"]
+	},
+	{
+		"id": "f-0012",
+        "name": "Pine Nut",
+        "desciption": "Pine Nuts, also known as Pignoli, are the edibleseeds of the pine tree.",
         "category": "DRIED_FRUIT",
-        "tag": ["dried fruit", "nonsynthetic preservative"],
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
         "img": {
-            "preview": "",
-            "info": "",
-            "alt": ""
+        		"preview": "/assets/img/fruit/dried/pine nut.jpg",
+        		"info": "",
+        		"alt": ""
         },
         "isOutOfStock": false,
-        "onSale": false,
-        "onSalePrice": 25,
-        "price": 35,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 33,
+        "price": 75,
         "unit": "lb",
-        "producer": []
-    }
+        "producer": ["Corpuz Farm"]
+	},
+	{
+		"id": "f-0013",
+        "name": "Prunes",
+        "desciption": "A prune is a dried plum, most commonly from theEuropean plum (Prunus domestica) tree.",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        "img": {
+        		"preview": "/assets/img/fruit/dried/prunes.jpg",
+        		"info": "",
+        		"alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 110,
+        "price": 220,
+        "unit": "lb",
+        "producer": ["Dumadag Farm"]
+	},
+	{
+		"id": "f-0014",
+        "name": "Raisin",
+        "desciption": "A raisin is a dehydrated or sun-dried grape. Raisinsare sweet and chewy, and they're often found in oatmeal cookies andgranola.",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        "img": {
+        		"preview": "/assets/img/fruit/dried/raisin.jpg",
+        		"info": "",
+        		"alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 13,
+        "price": 26,
+        "unit": "lb",
+        "producer": ["Lor Farm"]
+	},
+	{
+		"id": "f-0015",
+        "name": "Wallnuts",
+        "desciption": "Walnuts are the round, single-seed stone fruits ofthe walnut tree.",
+        "category": "DRIED_FRUIT",
+        "tag": ["dried fruit", "nonsynthetic preservative", "organic"],
+        "img": {
+        		"preview": "/assets/img/fruit/dried/wallnuts.jpg",
+        		"info": "",
+        		"alt": ""
+        },
+        "isOutOfStock": false,
+        "amountStock": 15,
+        "isOnSale": false,
+        "onSalePrice": 78,
+        "price": 165,
+        "unit": "lb",
+        "producer": ["Lor Farm"]
+	}
 ]

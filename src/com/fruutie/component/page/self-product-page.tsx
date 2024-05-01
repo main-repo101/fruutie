@@ -44,6 +44,7 @@ export function self_product_page(
             xl:place-content-evenly
             transform transition-all
             gap-12
+            w-[100%]
             '>
             <div className="inline-flex gap-8
             flex-col sm:flex-row">
@@ -281,7 +282,7 @@ export function self_product_page(
                     description
                     flex
                     place-content-baseline
-                    pt-8 pb-2'>{objTargetFruit?.desciption}</p>
+                    pt-8 pb-2'>{objTargetFruit?.description}</p>
                 <div className="tag
                     flex flex-wrap
                     place-content-center
@@ -300,7 +301,7 @@ export function self_product_page(
                                 return (
                                     <>&nbsp;
                                         <Link 
-                                            to={`/product/more/${item}`}
+                                            to={`/product/more/${item.replace(' ', '-')}`}
                                             key={id}
                                             className='bg-lime-400
                                             p-2 rounded-full

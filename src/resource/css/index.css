@@ -3,7 +3,7 @@
 @import 'tailwindcss/utilities';
 
 @import url('./animate/rotation.css');
-/* @import url('bg-hero.css'); */
+/* @import url('./bg-hero.css'); */
 
 /* .bg-water-ripples-effect {
     width: 100%;

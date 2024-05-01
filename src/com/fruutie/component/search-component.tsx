@@ -31,18 +31,19 @@ function search_component( {
     
     function searchProduct(searchQuery: string): IProduct[] {
         const normalizedQuery = searchQuery.trim().toLowerCase();
-        const keywords = normalizedQuery.split(' ');
-
-        keywords.reverse();
-
-        return simpleDbFruitAPI.filter(item =>
-            keywords.some(keyword =>
-                item.name.toLowerCase().includes(keyword) ||
-                item.producer.some(producer => producer.toLowerCase().includes(keyword)) ||
-                item.tag.some(tag => tag.toLowerCase().includes(keyword))
-            )
-        );
+        const keywords = normalizedQuery.split(' ').map(keyword => keyword.toLowerCase());
+    
+        return simpleDbFruitAPI.filter(item => {
+            return keywords.some(keyword => {
+                return (
+                    item.name.toLowerCase().includes(keyword) ||
+                    item.producer.some(producer => producer.toLowerCase().includes(keyword)) ||
+                    item.tag.some(tag => tag.toLowerCase().includes(keyword))
+                );
+            });
+        });
     }
+    
 
     return (
         <>
@@ -157,9 +158,10 @@ function search_component( {
                                         to={`/product/more/${
                                             probableSearch
                                             .filter(item => item && item.tag)
-                                            .flatMap(item => item.tag as string[])
+                                            .flatMap(item => item.tag )
+                                            .map( x => x.replace(' ', '-'))
                                             .filter((value, index, self) => self.indexOf(value) === index)
-                                            .join('; ')
+                                            .join(' ')
                                         }`}
                                         onClick={
                                             ()=>{

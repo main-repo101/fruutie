@@ -1,12 +1,12 @@
 [
     {
         "id": "f-0031",
-        "name": "Durian Candy",
+        "name": "Chocolate Candy",
         "desciption": "N/A",
         "category": "CANDY_FRUIT",
         "tag": ["candy fruit", "synthetic preservative"],
         "img": {
-            "preview": "",
+            "preview": "/assets/img/fruit/candy/chocolate.jpg",
             "info": "",
             "alt": ""
         },
@@ -14,18 +14,17 @@
         "onSale": false,
         "onSalePrice": 25,
         "price": 45,
-        "unit": "lb",
-        "producer": []
+        "unit": "g",
+        "producer": ["N/A"]
     },
-    
     {
-        "id": "f-0048",
-        "name": "Dried something",
+        "id": "f-0032",
+        "name": "Coconut Candy",
         "desciption": "N/A",
-        "category": "DRIED_FRUIT",
-        "tag": ["dried fruit", "nonsynthetic preservative"],
+        "category": "CANDY_FRUIT",
+        "tag": ["CANDY_FRUIT", "synthetic preservative"],
         "img": {
-            "preview": "",
+            "preview": "/assets/img/fruit/candy/coconut.jpg",
             "info": "",
             "alt": ""
         },
@@ -33,43 +32,25 @@
         "onSale": true,
         "onSalePrice": 25,
         "price": 38,
-        "unit": "lb",
-        "producer": []
-    },
-    {
-        "id": "f-0032",
-        "name": "Mango Candy",
-        "desciption": "N/A",
-        "category": "CANDY_FRUIT",
-        "tag": ["candy fruit", "synthetic preservative"],
-        "img": {
-            "preview": "",
-            "info": "",
-            "alt": ""
-        },
-        "isOutOfStock": false,
-        "onSale": false,
-        "onSalePrice": 19.25,
-        "price": 25.50,
-        "unit": "lb",
-        "producer": []
+        "unit": "g",
+        "producer": ["N/A"]
     },
     {
         "id": "f-0033",
-        "name": "Grape Candy",
+        "name": "Durian Candy",
         "desciption": "N/A",
         "category": "CANDY_FRUIT",
-        "tag": ["candy fruit", "synthetic preservative"],
+        "tag": ["CANDY_FRUIT", "synthetic preservative", "sweet"],
         "img": {
-            "preview": "",
+            "preview": "/assets/img/fruit/candy/durian.jpg",
             "info": "",
             "alt": ""
         },
-        "isOutOfStock": false,
-        "onSale": false,
-        "onSalePrice": 19.25,
-        "price": 25.50,
-        "unit": "lb",
-        "producer": []
+        "isOutOfStock": true,
+        "onSale": true,
+        "onSalePrice": 25,
+        "price": 38,
+        "unit": "g",
+        "producer": ["N/A"]
     }
 ]
