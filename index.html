@@ -7,24 +7,24 @@
     <title>Fruutie</title>
     <script defer type="module" src="/src/com/fruutie/index.tsx"></script>
     <!--REM: Why not working? This JQuery external module?-->
-    <script defer src="/repo/js/external/jquery/jquery-3.4.1.min.js"></script>
-    <script defer src="/repo/js/external/jquery/water-ripples/jquery.ripples-0.5.3.min.js"></script>
+    <!-- <script defer src="/repo/js/external/jquery/jquery-3.4.1.min.js"></script>
+    <script defer src="/repo/js/external/jquery/water-ripples/jquery.ripples-0.5.3.min.js"></script> -->
     <script>
       //REM: TODO_HERE: not working why??? Is it because where using 
       //REM: typescript ES6 module the said external jquery.ripples module not working well with TS?
-      window.addEventListener("load", function() {
-        $(document).ready(function() {
-          $(".bg-water-ripples-effect").ripples({
-            resolution: 200,
-            perturbance: .005,
-          });
-          $(".card-water-ripples-effect").ripples({
-            resolution: 200,
-            perturbance: .05,
-          });
-          console.log(`::: Rippling effect loaded...?`);
-        });
-      });
+      // window.addEventListener("load", function() {
+      //   $(document).ready(function() {
+      //     $(".bg-water-ripples-effect").ripples({
+      //       resolution: 200,
+      //       perturbance: .005,
+      //     });
+      //     $(".card-water-ripples-effect").ripples({
+      //       resolution: 200,
+      //       perturbance: .05,
+      //     });
+      //     console.log(`::: Rippling effect loaded...?`);
+      //   });
+      // });
     </script>
   </head>
   <body class="w-[100vw] h-[100svh] 

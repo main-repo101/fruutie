@@ -1,9 +1,16 @@
 import NavPath from "../../core/util/NavPath";
-
+import React from "react";
 
 export function sign_in_page(
     {title}:{title?:string | null}
 ): JSX.Element {
+    
+    React.useEffect(() => {
+        document.title = `${document.title.split('~')[0]} ~ Sign-In`;
+        return () => {
+            document.title = `${document.title.split('~')[0]?? 'Empty'}`;
+        };
+    }, []);
     return <>
         <div id={NavPath.SIGN_IN_PAGE.ID_ATTR}
             className='flex flex-col 

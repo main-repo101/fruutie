@@ -25,6 +25,19 @@ function main_layout(
                     username={username} 
                     title={title}
                 />
+                <div className="test-banner fixed z-50 
+                    xl:pt-0 top-[0rem] 
+                    flex flex-row place-content-end
+                    place-items-center
+                    w-[100%]">
+                    <span className="bg-black
+                        w-[25rem] text-center
+                        rounded-l-full
+                        text-lime-400
+                        ">
+                        This is a test...
+                    </span>
+                </div>
                 <Outlet/>
                 <FooterSection/>
             </div>

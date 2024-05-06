@@ -1,11 +1,18 @@
 
 import NavPath from "../../core/util/NavPath";
-import CardComponent from "../card-component";
+import CardIComponent from "../card-i-component";
 import simpleDbFruitAPI from "../../../../resource/db/fruit.json";
 import ButtonMoreV2 from "../widget/button-more-v2";
+import React from "react";
 
 function product_page(): JSX.Element {
     console.log(`::: Product page.`);
+    React.useEffect(() => {
+        document.title = `${document.title.split('~')[0]} ~ Product`;
+        return () => {
+            document.title = `${document.title.split('~')[0]?? 'Empty'}`;
+        };
+    }, []);
     return (
         <>
             <div id="PRODUCT_PAGE"
@@ -49,16 +56,10 @@ function product_page(): JSX.Element {
                                         )
                                     )
                                     .map(item => (
-                                        <CardComponent
+                                        <CardIComponent
                                             key={item.id}
-                                            productId={item.id}
-                                            productName={item.name}
-                                            img={item.img.preview}
-                                            isOutOfStock={item.isOutOfStock}
-                                            isOnSale={item.isOnSale}
-                                            onSalePrice={item.onSalePrice}
-                                            price={item.price}
-                                            unit={item.unit}
+                                            product={item}
+                                            isOnCart={false}
                                         />
                                     ))
                             }
@@ -93,16 +94,10 @@ function product_page(): JSX.Element {
                                         )
                                     )
                                     .map(item => (
-                                        <CardComponent
+                                        <CardIComponent
                                             key={item.id}
-                                            productId={item.id}
-                                            productName={item.name}
-                                            img={item.img.preview}
-                                            isOutOfStock={item.isOutOfStock}
-                                            isOnSale={item.isOnSale}
-                                            onSalePrice={item.onSalePrice}
-                                            price={item.price}
-                                            unit={item.unit}
+                                            product={item}
+                                            isOnCart={false}
                                         />
                                     ))
                             }
@@ -137,16 +132,10 @@ function product_page(): JSX.Element {
                                         )
                                     )
                                     .map(item => (
-                                        <CardComponent
+                                        <CardIComponent
                                             key={item.id}
-                                            productId={item.id}
-                                            productName={item.name}
-                                            img={item.img.preview}
-                                            isOutOfStock={item.isOutOfStock}
-                                            isOnSale={item.isOnSale}
-                                            onSalePrice={item.onSalePrice}
-                                            price={item.price}
-                                            unit={item.unit}
+                                            product={item}
+                                            isOnCart={false}
                                         />
                                     ))
                             }

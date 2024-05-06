@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import simpleDbFruitAPI from "../../../../resource/db/fruit.json";
-import CardComponent from "../card-component";
+import CardIComponent from "../card-i-component";
 
 //REM: we might re-use the 'more-product-page.tsx' instead of creating new page for this.
 //REM: Refactor it later.
@@ -40,16 +40,10 @@ export function search_product_page(): React.ReactElement {
                     SIMPLE_DB_FRUIT_API.map(
                         (item, id)=>{
                             return<>
-                                <CardComponent
+                                <CardIComponent
                                     key={id}
-                                    productId={item.id}
-                                    productName={item.name}
-                                    img={item.img.preview}
-                                    isOutOfStock={item.isOutOfStock}
-                                    isOnSale={item.isOnSale}
-                                    onSalePrice={item.onSalePrice}
-                                    price={item.price}
-                                    unit={item.unit}
+                                    product={item}
+                                    isOnCart={false}
                                 />
                             </>;
                         }

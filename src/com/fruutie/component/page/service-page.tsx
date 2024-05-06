@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { scroll_to_section } from "../../core/util/scroll-to-section";
 import NavPath from "../../core/util/NavPath";
 import SendMsgComponent from "../contact-us/send-msg-component";
-// import { useEffect } from 'react';
+import React from 'react';
 // import $ from 'jquery';
 // import 'jquery.ripples';
 
@@ -11,6 +11,12 @@ import SendMsgComponent from "../contact-us/send-msg-component";
 
 function service_page(): JSX.Element {
     console.log(`::: Service page.`);
+    React.useEffect(() => {
+        document.title = `${document.title.split('~')[0]} ~ Services`;
+        return () => {
+            document.title = `${document.title.split('~')[0]?? 'Empty'}`;
+        };
+    }, []);
     return (
         <>
             <div id="SERVICE_PAGE" className="flex flex-col 

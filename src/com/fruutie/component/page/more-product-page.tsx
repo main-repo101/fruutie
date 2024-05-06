@@ -1,9 +1,9 @@
 import { Link, useParams } from "react-router-dom";
 // import hotProduct from '../../../../resource/db/hot_product.json';
 // import onSaleProduct from '../../../../resource/db/on_sale_product.json';
-import CardComponent from "../card-component";
+import CardIComponent from "../card-i-component";
 import simpleDbFruitAPI from '../../../../resource/db/fruit.json';
-
+import React from "react";
 
 export function more_product_page(
     {
@@ -15,6 +15,12 @@ export function more_product_page(
 ): JSX.Element {
 
     const { groupProduct } = useParams();
+    React.useEffect(() => {
+        document.title = `${document.title.split('~')[0]} ~ More Product`;
+        return () => {
+            document.title = `${document.title.split('~')[0]?? 'Empty'}`;
+        };
+    }, []);
     // groupProduct = groupProduct || useSearchParams()[0].get('txtSearch')!;
     const targetTags = tags?.join(' ') || groupProduct;
     console.log( targetTags );
@@ -72,16 +78,10 @@ export function more_product_page(
                         )
                     ).map((item) => {
                         return (
-                            <CardComponent
+                            <CardIComponent
                                 key={item.id}
-                                productId={item.id}
-                                productName={item.name}
-                                img={item.img.preview}
-                                isOutOfStock={item.isOutOfStock}
-                                isOnSale={item.isOnSale}
-                                onSalePrice={item.onSalePrice}
-                                price={item.price}
-                                unit={item.unit}
+                                product={item}
+                                isOnCart={false}
                             />
                         );
                     })

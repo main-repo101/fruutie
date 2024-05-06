@@ -650,12 +650,12 @@
     {
         "id": "f-0031",
         "name": "Chocolate Candy",
-        "description": "Rich Indulgence",
+        "description": "Rich Indulgence. Indulge in rich indulgence with this delectable chocolate candy, perfect for satisfying your sweet cravings.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit", "synthetic preservative"],
+        "tag": ["sweet", "candy fruit", "indulgent", "rich"],
         "img": {
             "preview": "/assets/img/fruit/candy/chocolate.jpg",
-            "info": "Indulge in rich indulgence with this delectable chocolate candy, perfect for satisfying your sweet cravings.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
@@ -668,12 +668,12 @@
     {
         "id": "f-0032",
         "name": "Coconut Candy",
-        "description": "Tropical Bliss",
+        "description": "Tropical Bliss. Experience a taste of the tropics with this coconut candy, offering a tropical bliss in every bite.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit", "synthetic preservative"],
+        "tag": ["sweet", "candy fruit", "tropical", "blissful"],
         "img": {
             "preview": "/assets/img/fruit/candy/coconut.jpg",
-            "info": "Experience a taste of the tropics with this coconut candy, offering a tropical bliss in every bite.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": true,
@@ -686,16 +686,16 @@
     {
         "id": "f-0033",
         "name": "Durian Candy",
-        "description": "Bold Experience",
+        "description": "Bold Experience. Embark on a bold experience with this durian candy, crafted for those who enjoy adventurous flavors.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": [ "sweet", "candy fruit", "bold", "adventurous", "on sale"],
         "img": {
             "preview": "/assets/img/fruit/candy/durian.jpg",
-            "info": "Embark on a bold experience with this durian candy, crafted for those who enjoy adventurous flavors.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
-        "isOnSale": false,
+        "isOnSale": true,
         "onSalePrice": 25,
         "price": 50,
         "unit": "g",
@@ -705,17 +705,17 @@
     {
         "id": "f-0034",
         "name": "Grapes Candy",
-        "description": "candy Burst",
+        "description": "Juicy Burst. Enjoy a juicy burst of flavor with these grapes candies, offering a delightful sweetness in every piece.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit", "on sale"],
+        "tag": ["sweet", "candy fruit", "juicy", "fruity"],
         "img": {
             "preview": "/assets/img/fruit/candy/grapes.jpg",
-            "info": "Enjoy a candy burst of flavor with these grapes candies, offering a delightful sweetness in every piece.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
-        "isOnSale": true,
-        "onSalePrice": 16.25,
+        "isOnSale": false,
+        "onSalePrice": 0,
         "price": 30,
         "unit": "g",
         "producer": ["N/A"]
@@ -723,17 +723,17 @@
     {
         "id": "f-0035",
         "name": "Jackfruit Candy",
-        "description": "Exotic Sweetness",
+        "description": "Exotic Sweetness. Dive into an exotic sweetness with these jackfruit candies, capturing the essence of tropical indulgence.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "exotic", "tropical", "on sale"],
         "img": {
             "preview": "/assets/img/fruit/candy/jackfruit.jpg",
-            "info": "Dive into an exotic sweetness with these jackfruit candies, capturing the essence of tropical indulgence.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
-        "isOnSale": false,
-        "onSalePrice": 0,
+        "isOnSale": true,
+        "onSalePrice": 15.25,
         "price": 35,
         "unit": "g",
         "producer": ["N/A"]
@@ -743,15 +743,15 @@
         "name": "Kiwi Candy",
         "description": "Tangy Delight",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "tangy", "refreshing", "on sale"],
         "img": {
             "preview": "/assets/img/fruit/candy/kiwi.jpg",
             "info": "Savor the tangy delight of kiwi with these candies, delivering a refreshing burst of fruity flavor.",
             "alt": ""
         },
         "isOutOfStock": false,
-        "isOnSale": false,
-        "onSalePrice": 0,
+        "isOnSale": true,
+        "onSalePrice": 25,
         "price": 40,
         "unit": "g",
         "producer": ["N/A"]
@@ -761,7 +761,7 @@
         "name": "Lychee Candy",
         "description": "Sweet Sensation",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "tropical", "exotic"],
         "img": {
             "preview": "/assets/img/fruit/candy/Lychee.jpg",
             "info": "Delight in the sweet sensation of lychee with these candies, offering a taste of tropical paradise.",
@@ -780,7 +780,7 @@
         "name": "Mango Candy",
         "description": "Tropical Treat",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "tropical", "luscious"],
         "img": {
             "preview": "/assets/img/fruit/candy/mango.jpg",
             "info": "Treat yourself to a tropical treat with these mango candies, bursting with the luscious sweetness of ripe mangoes.",
@@ -796,12 +796,12 @@
     {
         "id": "f-0039",
         "name": "Melon Candy",
-        "description": "Refreshing Sweetness",
+        "description": "Refreshing Sweetness. Experience a refreshing sweetness with these melon candies, perfect for a burst of fruity flavor on the go.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": [ "sweet", "candy fruit", "refreshing", "fruity"],
         "img": {
             "preview": "/assets/img/fruit/candy/melon.jpg",
-            "info": "Experience a refreshing sweetness with these melon candies, perfect for a burst of fruity flavor on the go.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
@@ -814,17 +814,17 @@
     {
         "id": "f-0040",
         "name": "Orange Candy",
-        "description": "Citrus Burst",
+        "description": "Citrus Burst. Enjoy a citrus burst of flavor with these orange candies, offering a zesty twist to your snacking experience.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "citrusy", "zesty", "on sale"],
         "img": {
             "preview": "/assets/img/fruit/candy/orange.jpg",
-            "info": "Enjoy a citrus burst of flavor with these orange candies, offering a zesty twist to your snacking experience.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
-        "isOnSale": false,
-        "onSalePrice": 0,
+        "isOnSale": true,
+        "onSalePrice": 28.99,
         "price": 32,
         "unit": "g",
         "producer": ["N/A"]
@@ -832,12 +832,12 @@
     {
         "id": "f-0041",
         "name": "Peach Candy",
-        "description": "Fuzzy Sweetness",
+        "description": "Fuzzy Sweetness. Indulge in fuzzy sweetness with these peach candies, capturing the essence of ripe, juicy peaches in every bite.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "fuzzy", "juicy"],
         "img": {
             "preview": "/assets/img/fruit/candy/peach.jpg",
-            "info": "Indulge in fuzzy sweetness with these peach candies, capturing the essence of ripe, candy peaches in every bite.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
@@ -851,12 +851,12 @@
     {
         "id": "f-0042",
         "name": "Peanut Candy",
-        "description": "Crunchy Sweetness",
+        "description": "Crunchy Sweetness. Crunch into crunchy sweetness with these peanut candies, offering a delightful blend of nutty and sweet flavors.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "crunchy", "nutty"],
         "img": {
             "preview": "/assets/img/fruit/candy/peanut.jpg",
-            "info": "Crunch into crunchy sweetness with these peanut candies, offering a delightful blend of nutty and sweet flavors.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
@@ -869,12 +869,12 @@
     {
         "id": "f-0043",
         "name": "Pear Candy",
-        "description": "Crisp Sweetness",
+        "description": "Crisp Sweetness. Experience crisp sweetness with these pear candies, delivering a refreshing taste reminiscent of freshly picked pears.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "crisp", "refreshing"],
         "img": {
             "preview": "/assets/img/fruit/candy/pear.jpg",
-            "info": "Experience crisp sweetness with these pear candies, delivering a refreshing taste reminiscent of freshly picked pears.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
@@ -889,13 +889,13 @@
         "name": "Pineapple Candy",
         "description": "Tropical Sweetness. Dive into tropical sweetness with these pineapple candies, offering a taste of island paradise in every piece.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "tropical", "island-inspired"],
         "img": {
             "preview": "/assets/img/fruit/candy/pineapple.jpg",
             "info": "",
             "alt": ""
         },
-        "isOutOfStock": true,
+        "isOutOfStock": false,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 39,
@@ -905,12 +905,12 @@
     {
         "id": "f-0045",
         "name": "Strawberry Candy",
-        "description": "Berry Sweetness",
+        "description": "Berry Sweetness. Enjoy berry sweetness with these strawberry candies, bursting with the juicy flavor of ripe strawberries.",
         "category": "CANDY_FRUIT",
-        "tag": ["sweet", "candy fruit"],
+        "tag": ["sweet", "candy fruit", "berry", "juicy"],
         "img": {
             "preview": "/assets/img/fruit/candy/strawberry.jpg",
-            "info": "Enjoy berry sweetness with these strawberry candies, bursting with the candy flavor of ripe strawberries.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
@@ -923,12 +923,12 @@
     {
         "id": "f-0046",
         "name": "Tamarind Candy",
-        "description": "Tangy Delight",
+        "description": "Tangy Delight. Savor tangy delight with these tamarind candies, offering a unique twist of sourness and sweetness in every piece.",
         "category": "CANDY_FRUIT",
-        "tag": ["sour"],
+        "tag": ["sour", "candy fruit", "tangy", "delightful"],
         "img": {
             "preview": "/assets/img/fruit/candy/tamarind.jpg",
-            "info": "Savor tangy delight with these tamarind candies, offering a unique twist of sourness and sweetness in every piece.",
+            "info": "",
             "alt": ""
         },
         "isOutOfStock": false,
@@ -938,7 +938,6 @@
         "unit": "g",
         "producer": ["N/A"]
     }
-    
     ,
     {
         "id": "f-0050",

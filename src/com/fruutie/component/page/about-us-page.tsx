@@ -4,9 +4,16 @@ import AboutUsMissionComponent from '../about-us/about-us-mission-component';
 import AboutUsCompanyInfoComponent from '../about-us/aobut-us-company-info-component';
 import AboutUsProductOverviewComponent from '../about-us/about-us-product-overview-component';
 import AboutUsTeamMemberComponent from '../about-us/about-us-team-member-component';
+import React from "react";
 
 function about_us_page({title}:{title?:string|null}): JSX.Element {
     console.log(`::: About Us page.`);
+    React.useEffect(() => {
+        document.title = `${document.title.split('~')[0]} ~ About-Us`;
+        return () => {
+            document.title = `${title ?? 'Empty'}`;
+        };
+    }, []);
 
     return (
         <>

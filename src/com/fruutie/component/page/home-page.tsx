@@ -1,6 +1,5 @@
 import HeroSection from "../hero-section.tsx";
 import { com$fruutie$core } from "../../core/com$fruutie$core.ts";
-import CardComponent from "../card-component.tsx";
 
 // import hotProduct from '../../../../resource/db/hot_product.json';
 // import onSaleProduct from '../../../../resource/db/on_sale_product.json';
@@ -8,9 +7,18 @@ import simpleDbFruitAPI from '../../../../resource/db/fruit.json';
 import { Link } from "react-router-dom";
 import { scroll_to_section } from "../../core/util/scroll-to-section.ts";
 import NavPath from "../../core/util/NavPath.ts";
+import CardIComponent from "../card-i-component.tsx";
+import React from "react";
 
 
 function home_page( {title = com$fruutie$core.Status.NA.VALUE }:{title?: string | null} ): JSX.Element {
+
+    React.useEffect(() => {
+      document.title = `${title} ~ Home`;
+      return () => {
+          document.title = `${title ?? 'Empty'}`;
+      };
+    }, []);
 
     // const HOT_PRODUCT = hotProduct.flat().splice(0,Math.min(4,hotProduct.length));
     // const ON_SALE_PRODUCT = onSaleProduct.flat().slice(0, Math.min(4, onSaleProduct.length));
@@ -59,14 +67,7 @@ function home_page( {title = com$fruutie$core.Status.NA.VALUE }:{title?: string 
                 )
               )
               .map((item, index)=>(
-                <CardComponent key={index} productName={item.name}
-                  productId={item.id}
-                  img={item.img.preview}
-                  isOutOfStock={item.isOutOfStock}
-                  isOnSale={item.isOnSale}
-                  onSalePrice={item.onSalePrice}
-                  price={item.price}
-                  unit={item.unit}/>
+                <CardIComponent key={index} product={item} isOnCart={false}/>
               ))}
             </div>
             <Link 
@@ -135,14 +136,15 @@ function home_page( {title = com$fruutie$core.Status.NA.VALUE }:{title?: string 
                   simpleDbFruitAPI.length
                 )
               ).map((item, index)=>{
-                return (<CardComponent key={index} productName={item.name}
-                  productId={item.id}
-                  img={item.img.preview}
-                  isOutOfStock={item.isOutOfStock}
-                  isOnSale={item.isOnSale}
-                  onSalePrice={item.onSalePrice}
-                  price={item.price}
-                  unit={item.unit}/>);
+                // return (<CardComponent key={index} productName={item.name}
+                //   productId={item.id}
+                //   img={item.img.preview}
+                //   isOutOfStock={item.isOutOfStock}
+                //   isOnSale={item.isOnSale}
+                //   onSalePrice={item.onSalePrice}
+                //   price={item.price}
+                //   unit={item.unit}/>);
+                return <CardIComponent key={index} product={item} isOnCart={false}/>
               })}
             </div>
             <Link 

@@ -1,5 +1,6 @@
 import { FaCartShopping } from "react-icons/fa6";
-import { NavLink } from "react-router-dom";
+import { FaTimesCircle } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
 
 import NavBarComponent from "./nav-bar-component.tsx";
 import LogoComponent from "./logo-component.tsx";
@@ -8,13 +9,86 @@ import IconProfile from '/src/resource/img/icon/icon-logo-white.png';
 
 import { com$fruutie$core } from '../core/com$fruutie$core.ts';
 import { scroll_to_section } from "../core/util/scroll-to-section.ts";
-import { useState } from "react";
+import React, { useState } from "react";
 import NavBarMobileComponent from "./nav-bar-mobile-component.tsx";
+import CardIComponent from "./card-i-component.tsx";
+import simpleDBFruitAPI from "../../../resource/db/fruit.json";
+import NavPath from "../core/util/NavPath.ts";
 
-function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{username?:string|null, title?:string|null|undefined}): JSX.Element {
+function header_section(
+    {username = com$fruutie$core.Status.NA.VALUE, title}
+    :{username?:string|null, title?:string|null|undefined}
+): JSX.Element {
     console.log(`::: /src/com/fruutie/component/header-section.tsx: title=${title}`);
     const [showCart, setShowCart] = useState(false);
+    const [windowSize, setWindowSize] = useState<{ width: number; height: number }>({
+            width: window.innerWidth,
+            height: window.innerHeight,
+    });
+        
+    React.useEffect(() => {
+        const handleResize = () => {
+        setWindowSize({
+            width: window.innerWidth,
+            height: window.innerHeight,
+        });
+        };
+    
+        // Add event listener to update dimensions when the window is resized
+        window.addEventListener('resize', handleResize);
+    
+        // Remove event listener on component unmount
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
+    console.log(`dim: w=${windowSize.width}, h=${windowSize.height}`);
+
+    //REM: TODO_HERE; Oh my...
+    // const [ getTotalAmount, setTotalAmount ] = useState(0);
+    const getProductDataFromLocalStorage = (regex: RegExp): { 
+        productId: string; value: string 
+    }[] => {
+        const productData: { productId: string; value: string }[] = [];
+    
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key && regex.test(key)) {
+                const value = localStorage.getItem(key);
+                if (value !== null && value !== '0') {
+                    productData.push({ productId: key, value });
+                }
+            }
+        }
+    
+        return productData;
+    };
+
+    // React.useEffect(
+    //     ()=>{
+    //         setTotalAmount(totalAmount)
+    //     },
+    //     []
+    // )
+    
+    const regexPattern = /f-\d{4}/;
+    const [ getProductDataArray, setProductDataArray ] = useState<{ 
+        productId: string; value: string 
+    }[] | null>(null)
+
+    React.useEffect(
+        ()=>{
+            setProductDataArray( getProductDataFromLocalStorage(regexPattern) );
+        },
+        [showCart]
+    )
+    // let productDataArray = getProductDataFromLocalStorage(regexPattern);
+
+    console.log(getProductDataArray);
+
+    let totalAmount:number = 0;
+    
     return (
         <>
             <div className='
@@ -49,6 +123,7 @@ function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{us
                             onClick={(e)=>{
                                 e.preventDefault();
                                 setShowCart(prevData=> !prevData );
+                                totalAmount = 0;
                             }}
                             className="w-[100%] h-[100%] relative
                         hover:animate-pulse
@@ -189,8 +264,173 @@ function header_section({username = com$fruutie$core.Status.NA.VALUE, title}:{us
                 h-[100svh]
                 transition-all transform
                 ease-in-out duration-500
+                gap-2
+                p-4
+                pt-12
+                md:pt-4
                 ${showCart ? `translate-x-[0rem]` : `translate-x-[50rem]`}`}>
-                    
+                <div className="inline-flex
+                    place-content-between
+                    place-items-center
+                    pl-0 pr-2
+                    text-[2rem]">
+                    <FaTimesCircle 
+                    onClick={(e)=>{
+                        e.preventDefault();
+                        setShowCart(prevData=>!prevData );
+                    }}
+                    className="w-[2.5rem] h-auto rounded-full text-amber-950
+                    hover:text-amber-800
+                    cursor-pointer
+                    hover:scale-110
+                    ease-in-out duration-300"/>
+                    <Link
+                        to={NavPath.SIGN_IN_PAGE.URL}
+                        onClick={
+                            ()=>
+                            scroll_to_section(NavPath.SIGN_IN_PAGE.ID_ATTR, 200)
+                        }
+                        className="btn-view-cart
+                        bg-lime-400
+                        pl-4 pr-4
+                        rounded-tr-[2rem]
+                        rounded-bl-[2rem]
+                        border-4 border-amber-800
+                        cursor-pointer 
+                        hover:scale-105
+                        ease-in-out duration-300">
+                        <span className="text-amber-950
+                            font-semibold">
+                            View Cart
+                        </span>
+                    </Link>
+                </div>
+                <div className="items-selected-list flex flex-col
+                    w-[100%] h-[25rem]
+                    bg-white/55 rounded-xl
+                    border-amber-800
+                    border-4
+                    ease-in-out duration-500
+                    overflow-y-auto
+                    overflow-x-hidden
+                    transition-transform
+                    ">
+                    {
+                        getProductDataArray?.map(
+                            (item, index) => {
+                                //REM: TODO_HERE;...
+                                const ITEM = simpleDBFruitAPI.find( i => i.id == item.productId )
+                                let itemPrice: number = ( (ITEM!.isOnSale)
+                                    ? ITEM!.onSalePrice 
+                                    : ITEM!.price
+                                ) * parseInt(item.value);
+                                totalAmount += itemPrice;
+                                return <>
+                                    <div
+                                        className="inline-flex relative
+                                        group/item w-[100%]">
+                                        <CardIComponent
+                                            key={index}
+                                            product={ITEM}
+                                            isOnCart={true}/>
+                                        <div className="
+                                            flex
+                                            gap-6
+                                            absolute
+                                            z-10
+                                            right-0
+                                            top-0
+                                            mr-[4rem]
+                                            pt-4
+                                            text-amber-800
+                                            font-semibold
+                                            text-[1.2rem]
+                                            group-hover/item:text-amber-950
+                                            ">
+                                        <span className="">
+                                            Php&nbsp;
+                                            {
+                                                itemPrice.toFixed(2)
+                                            }
+                                        </span>
+                                        <span className="
+                                            inline-flex
+                                            text-[1.2rem]
+                                            group-hover/item:text-amber-950">
+                                            {item.value}
+                                            {/* <span className="text-sm
+                                                flex place-content-center
+                                                place-items-end">
+                                                {ITEM?.unit}
+                                            </span> */}
+                                        </span>
+                                        </div>
+                                        <span className="
+                                            absolute
+                                            right-4
+                                            top-5
+                                            text-amber-800
+                                            group-hover/item:text-amber-950
+                                            ">
+                                            <FaTimesCircle 
+                                                onClick={
+                                                    e=> {
+                                                        e.preventDefault();
+                                                        setProductDataArray( p => p!.filter(i => i.productId !== item.productId) );
+                                                        localStorage.setItem(`${item.productId}`, '0');
+                                                    }
+                                                }
+                                                className="pl-2 pr-2
+                                                cursor-pointer
+                                                w-[2rem] h-auto
+                                                hover:text-amber-950
+                                                hover:scale-125
+                                                duration-300 ease-in-out"/>
+                                        </span>
+                                    </div>
+                                </>
+                            }
+                        )
+                    }
+                </div>
+                {/*REM: TODO_HERE; fix the layout UI of this 
+                when encounter with height is equal or less than 730px*/}
+                <div className="flex flex-row
+                    place-content-between
+                    place-items-center
+                    font-semibold text-[2rem]
+                    ease-in-out duration-500
+                    pl-0 pr-2">
+                    <div className="
+                        ease-in-out duration-500">
+                        <span>Your Cart</span><br/>
+                        <span>Php {totalAmount.toFixed(2)}</span>
+                    </div>
+                    <Link
+                        to={NavPath.SIGN_IN_PAGE.URL}
+                        onClick={()=>{
+                            scroll_to_section(NavPath.SIGN_IN_PAGE.ID_ATTR, 200);
+                        }}
+                        className="
+                        btn-check-out
+                        bg-amber-700
+                        group/btn-check-out
+                        p-4 rounded-[2.5rem]
+                        hover:bg-lime-400
+                        cursor-pointer
+                        ease-in-out duration-300
+                        border-4
+                        border-amber-950
+                        flex place-content-center
+                        place-items-center
+                        hover:scale-105">
+                        <span className="
+                            text-center text-white
+                            group-hover/btn-check-out:text-amber-950">
+                            Check Out
+                        </span>
+                    </Link>
+                </div>
             </div>
         </>
     );

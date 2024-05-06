@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import imgDefault from '/src/resource/img/icon/icon-logo-gold.png';
 
-import { useState } from "react";
+import React, { useState } from "react";
 import simpleDbFruit from '../../../../resource/db/fruit.json';
 import { Status } from "../../core/Status";
 import { FaMinus, FaPlus, } from "react-icons/fa6";
@@ -20,9 +20,42 @@ export function self_product_page(
     // }
 ): JSX.Element {
 
-    const [numItemInCart, setNumItemInCart] = useState(0);
+    
+    
+
+    console.log("::: self product page")
 
     let { name, id } = useParams();
+
+    React.useEffect(() => {
+        document.title = `${document.title.split('~')[0]} ~ ${name}`;
+        return () => {
+            document.title = `${document.title.split('~')[0]?? 'Empty'}`;
+        };
+    }, [name]);
+
+    const [numItemInCart, setNumItemInCart] = useState(0);
+
+    //REM: [DUPLICATE:0x2]: Oh my.... clean it later
+    const handleIncrement = () => {
+        const updatedNumItemInCart = numItemInCart + 1;
+        setNumItemInCart(updatedNumItemInCart);
+        localStorage.setItem(`${id}`, updatedNumItemInCart.toString());
+    };
+    //REM: [DUPLICATE:0x2]: Oh my.... clean it later
+    const handleDecrement = () => {
+        const updatedNumItemInCart = numItemInCart - 1;
+        if (updatedNumItemInCart >= 0) {
+            setNumItemInCart(updatedNumItemInCart);
+            localStorage.setItem(`${id}`, updatedNumItemInCart.toString());
+        }
+    };
+    //REM: [DUPLICATE:0x2]: Oh my.... clean it later
+    React.useEffect(() => {
+        const storedCounter = localStorage.getItem(`${id}`);
+        setNumItemInCart(parseInt(storedCounter??'0', 10));
+    }, [name]);
+
     
     const SIMPLE_DB_FRUIT = simpleDbFruit;
     let objTargetFruit = null;
@@ -168,8 +201,7 @@ export function self_product_page(
                         <span 
                             onClick={(e)=>{
                                 e.preventDefault();
-                                if( numItemInCart > 0 )
-                                    setNumItemInCart(num=>--num);
+                                handleDecrement();
                             }}
                             className={`
                             cursor-pointer
@@ -202,7 +234,20 @@ export function self_product_page(
                                 font-bold
                                 rounded-full'/>
                         </span>
-                        <span className='
+                        <input 
+                            type='text'
+                            inputMode="numeric"
+                            value={numItemInCart}
+                            onChange={
+                                e => {
+                                    setNumItemInCart(parseInt(e.target.value));
+                                    localStorage.setItem(`${id}`, e.target.value.toString());
+                                }
+                            }
+                            className='
+                            flex place-content-center
+                            place-items-center
+                            text-center
                             item-number
                             border-2
                             border-amber-800
@@ -210,14 +255,12 @@ export function self_product_page(
                             bg-amber-200
                             w-[100%]
                             text-xl
-                            text-center
-                            font-bold'>
-                            {numItemInCart}
-                        </span>
+                            font-bold'
+                        />
                         <span 
                             onClick={(e)=>{
                                 e.preventDefault();
-                                setNumItemInCart(num=>++num);
+                                handleIncrement();
                             }}
                             className={`
                             cursor-pointer
