@@ -295,6 +295,7 @@
       },
       "isOutOfStock": false,
       "isOnSale": true,
+      "amountStock": 98,
       "onSalePrice": 70,
       "price": 161,
       "unit": "KG",
@@ -312,10 +313,11 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 96,
-      "price": 100,
-      "unit": "KG",
+      "price": 19.50,
+      "unit": "pc",
       "producer":["N/A"]     
     },
     {
@@ -330,6 +332,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 0,
       "price": 55,
@@ -348,6 +351,7 @@
            "alt": ""
       },
       "isOutOfStock": true,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 0,
       "price": 87,
@@ -366,10 +370,11 @@
            "alt": ""
       },
       "isOutOfStock": true,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 32,
       "price": 74,
-      "unit": "KG",
+      "unit": "pc",
       "producer":["N/A"]     
     },
     {
@@ -385,6 +390,7 @@
       },
       "isOutOfStock": false,
       "isOnSale": true,
+        "amountStock": 98,
       "onSalePrice": 35,
       "price": 72,
       "unit": "KG",
@@ -402,6 +408,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 0,
       "price": 150,
@@ -420,6 +427,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 69,
       "price": 95,
@@ -438,6 +446,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 0,
       "price": 60,
@@ -456,6 +465,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 80,
       "price": 120,
@@ -475,6 +485,7 @@
       },
       "isOutOfStock": false,
       "isOnSale": true,
+        "amountStock": 98,
       "onSalePrice": 29,
       "price": 47,
       "unit": "KG",
@@ -492,6 +503,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 122,
       "price": 168,
@@ -510,6 +522,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 46,
       "price": 63,
@@ -528,6 +541,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 0,
       "price": 58,
@@ -546,6 +560,7 @@
            "alt": ""
       },
       "isOutOfStock": false,
+      "amountStock": 101,
       "isOnSale": false,
       "onSalePrice": 0,
       "price": 49,
@@ -659,6 +674,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 25,
         "price": 45,
@@ -678,6 +694,7 @@
         },
         "isOutOfStock": true,
         "isOnSale": true,
+        "amountStock": 98,
         "onSalePrice": 25,
         "price": 38,
         "unit": "g",
@@ -696,6 +713,7 @@
         },
         "isOutOfStock": false,
         "isOnSale": true,
+        "amountStock": 98,
         "onSalePrice": 25,
         "price": 50,
         "unit": "g",
@@ -714,6 +732,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 30,
@@ -733,6 +752,7 @@
         },
         "isOutOfStock": false,
         "isOnSale": true,
+        "amountStock": 98,
         "onSalePrice": 15.25,
         "price": 35,
         "unit": "g",
@@ -751,6 +771,7 @@
         },
         "isOutOfStock": false,
         "isOnSale": true,
+        "amountStock": 98,
         "onSalePrice": 25,
         "price": 40,
         "unit": "g",
@@ -768,6 +789,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 42,
@@ -787,6 +809,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 48,
@@ -805,6 +828,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 36,
@@ -824,6 +848,7 @@
         },
         "isOutOfStock": false,
         "isOnSale": true,
+        "amountStock": 98,
         "onSalePrice": 28.99,
         "price": 32,
         "unit": "g",
@@ -841,6 +866,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 34,
@@ -860,6 +886,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 28,
@@ -878,6 +905,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 33,
@@ -896,6 +924,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 39,
@@ -914,6 +943,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 31,
@@ -932,6 +962,7 @@
             "alt": ""
         },
         "isOutOfStock": false,
+        "amountStock": 98,
         "isOnSale": false,
         "onSalePrice": 0,
         "price": 37,

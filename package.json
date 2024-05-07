@@ -1,7 +1,7 @@
 {
   "name": "fruutie",
   "private": true,
-  "version": "0.1.91",
+  "version": "0.1.97",
   "type": "module",
   "scripts": {
     "dev": "vite",

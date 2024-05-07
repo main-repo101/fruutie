@@ -8,6 +8,10 @@ import { FaMinus, FaPlus, } from "react-icons/fa6";
 import Tooltip from "../util/tool-tip";
 import RelatedComponent from "../related-component";
 
+import { com$fruutie$core$util } from "../../core/util/com$fruutie$core$util";
+
+const { CURRENCY } = com$fruutie$core$util;
+
 
 export function self_product_page(
     // {
@@ -19,13 +23,19 @@ export function self_product_page(
     //     category?:string
     // }
 ): JSX.Element {
-
     
-    
-
     console.log("::: self product page")
 
     let { name, id } = useParams();
+
+    const SIMPLE_DB_FRUIT = simpleDbFruit;
+    let objTargetFruit = null;
+    for(let i = 0; i < SIMPLE_DB_FRUIT.length; ++i ) {
+        if( SIMPLE_DB_FRUIT[i].id === id ) {
+            objTargetFruit = SIMPLE_DB_FRUIT[i];
+            break;
+        }
+    }
 
     React.useEffect(() => {
         document.title = `${document.title.split('~')[0]} ~ ${name}`;
@@ -38,7 +48,7 @@ export function self_product_page(
 
     //REM: [DUPLICATE:0x2]: Oh my.... clean it later
     const handleIncrement = () => {
-        const updatedNumItemInCart = numItemInCart + 1;
+        const updatedNumItemInCart = Math.min(numItemInCart + 1, objTargetFruit?.amountStock?? 1 )
         setNumItemInCart(updatedNumItemInCart);
         localStorage.setItem(`${id}`, updatedNumItemInCart.toString());
     };
@@ -56,15 +66,7 @@ export function self_product_page(
         setNumItemInCart(parseInt(storedCounter??'0', 10));
     }, [name]);
 
-    
-    const SIMPLE_DB_FRUIT = simpleDbFruit;
-    let objTargetFruit = null;
-    for(let i = 0; i < SIMPLE_DB_FRUIT.length; ++i ) {
-        if( SIMPLE_DB_FRUIT[i].id === id ) {
-            objTargetFruit = SIMPLE_DB_FRUIT[i];
-            break;
-        }
-    }
+ 
     return (
         <div id="SELF_PRODUCT_PAGE"
             className='flex
@@ -101,8 +103,10 @@ export function self_product_page(
                 <img className={`
                     flex
                     img-fruit
-                    w-[100%]
+                    sm:w-[18rem]
                     h-[100%]
+                    bg-cover
+                    bg-no-repeat
                     hover:scale-110
                     place-content-center
                     place-items-center
@@ -155,7 +159,7 @@ export function self_product_page(
                     text-amber-800
                     font-bold
                     relative'>
-                    <span className='text-lg font-semibold'>Php</span>&nbsp;
+                    <span className='text-lg font-semibold'>{CURRENCY.PHP.VALUE}</span>&nbsp;
                     {objTargetFruit?.isOnSale
                         ? (<>
                             <div>
@@ -163,7 +167,13 @@ export function self_product_page(
                                     font-bold
                                     text-slate-500
                                     relative'>
-                                    {objTargetFruit?.price}
+                                    {objTargetFruit?.price.toLocaleString(
+                                        CURRENCY.PHP.LABEL,
+                                        {
+                                            style: "currency",
+                                            currency: CURRENCY.PHP.VALUE
+                                        }
+                                    )}
                                     <span className='
                                         absolute
                                         top-3
@@ -173,16 +183,29 @@ export function self_product_page(
                                         border-b-4'></span>
                                 </span>
                                 &nbsp;~&nbsp;
-                                <span>{objTargetFruit?.onSalePrice}</span>
+                                <span>{objTargetFruit?.onSalePrice
+                                    .toLocaleString(
+                                        CURRENCY.PHP.LABEL,
+                                        {
+                                            style: "currency",
+                                            currency: CURRENCY.PHP.VALUE
+                                        }
+                                    )}</span>
                             </div>
                         </>)
-                        : objTargetFruit?.price
+                        : objTargetFruit?.price.toLocaleString(
+                            CURRENCY.PHP.LABEL,
+                            {
+                                style: "currency",
+                                currency: CURRENCY.PHP.VALUE
+                            }
+                        )
                     }
                     <span className='text-[1.6rem]
                         font-normal'>
                         /
                     </span>
-                    <span className='flex 
+                    <span className='
                         text-lg pt-1
                         font-semibold'>
                         {objTargetFruit?.unit}
@@ -235,13 +258,16 @@ export function self_product_page(
                                 rounded-full'/>
                         </span>
                         <input 
-                            type='text'
+                            disabled={objTargetFruit?.isOutOfStock}                            
+                            type='numeric'
                             inputMode="numeric"
                             value={numItemInCart}
                             onChange={
                                 e => {
-                                    setNumItemInCart(parseInt(e.target.value));
-                                    localStorage.setItem(`${id}`, e.target.value.toString());
+                                    const countItem = parseInt(e.target.value);
+                                    const validCountItem = !isNaN(countItem) ? Math.min(countItem, objTargetFruit?.amountStock?? 1) : 0;
+                                    setNumItemInCart(validCountItem);
+                                    localStorage.setItem(`${id}`, validCountItem.toString());
                                 }
                             }
                             className='

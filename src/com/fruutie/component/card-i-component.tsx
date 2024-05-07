@@ -6,6 +6,10 @@ import imgDefault from '/src/resource/img/icon/icon-logo-white.png';
 import { Status } from "../core/Status";
 import { scroll_to_section } from "../core/util/scroll-to-section";
 import IProduct from "../core/model/IProduct.mts";
+import { FaMinus, FaPlus } from "react-icons/fa6";
+import { com$fruutie$core$util } from "../core/util/com$fruutie$core$util";
+
+const { CURRENCY } = com$fruutie$core$util;
 // import { FaTimesCircle } from "react-icons/fa";
 // import NavPath from "../core/util/NavPath";
 
@@ -36,14 +40,13 @@ export function card_i_component(
     let imgPreview = product?.img.preview || imgDefault;
     let url = `/product/${product?.name??Status.NA.VALUE}/${productId?? Status.NA.VALUE}`;
     let isOutOfStock = product?.isOutOfStock??false;
-
-    const CURRENCY = 'Php'; //REM: TODO_HERE...
+ //REM: TODO_HERE...
 
     const [numItemInCart, setNumItemInCart] = useState(0);
     
     //REM: [DUPLICATE:0x2]: Oh my.... clean it later
     const handleIncrement = () => {
-        const updatedNumItemInCart = numItemInCart + 1;
+        const updatedNumItemInCart = Math.min(numItemInCart + 1, product?.amountStock?? 1 )
         setNumItemInCart(updatedNumItemInCart);
         localStorage.setItem(`${product?.id}`, updatedNumItemInCart.toString());
     };
@@ -155,7 +158,7 @@ export function card_i_component(
                                                 handleDecrement();
                                             }
                                         } 
-                                        className='p-2
+                                        className='
                                         active:bg-white
                                         w-[2rem] h-[2rem]
                                         inline-flex
@@ -166,20 +169,22 @@ export function card_i_component(
                                         border-2
                                         border-amber-800
                                         bg-amber-300
-                                        text-5xl font-bald
+                                        text-9xl font-bold
                                         relative
                                         hover:bg-amber-800
                                         hover:text-white
                                         hover:scale-125
-                                        ease-in-out duration-500'><span
-                                        className='absolute -top-[.85rem]'>-</span></div>
+                                        ease-in-out duration-500'>
+                                        <FaMinus className="pr-1 pl-1
+                                            w-[100%] h-[100%] rounded-full"/>
+                                    </div>
                                     <div onClick={
                                             (e)=>{
                                                 e.preventDefault();
                                                 handleIncrement();
                                             }
                                         } 
-                                        className='p-2
+                                        className='
                                         active:bg-white
                                         w-[2rem] h-[2rem]
                                         inline-flex
@@ -190,17 +195,15 @@ export function card_i_component(
                                         border-2
                                         border-amber-800
                                         bg-amber-300
-                                        text-4xl font-bald
+                                        text-9xl font-bold
                                         relative
                                         hover:bg-amber-800
                                         hover:text-white
                                         hover:scale-125
                                         ease-in-out duration-500
                                         '>
-                                        <span
-                                            className='absolute -top-[.65rem]'>
-                                            +
-                                        </span>
+                                        <FaPlus className="pr-1 pl-1 
+                                            w-[100%] h-[100%] rounded-full"/>
                                     </div>
                             </div>  
                         
@@ -230,13 +233,19 @@ export function card_i_component(
                         text-md font-semibold
                         text-amber-950
                         p-1">
-                        {CURRENCY}&nbsp;
+                        {CURRENCY.PHP.VALUE}&nbsp;
                         {
                             product?.isOnSale
                             ?<>
                                 <span className='text-slate-500
                                     relative'>
-                                    {product?.price.toString()}
+                                    {product?.price.toLocaleString(
+                                        CURRENCY.PHP.LABEL,
+                                        {
+                                            style: "currency",
+                                            currency: CURRENCY.PHP.VALUE
+                                        }
+                                    )}
                                     <span className='
                                     absolute
                                     left-0
@@ -247,10 +256,22 @@ export function card_i_component(
                                 </span>
                                 &nbsp;~&nbsp;
                                 <span className='text-xl'>
-                                    {product?.onSalePrice.toString()}
+                                    {product?.onSalePrice.toLocaleString(
+                                        CURRENCY.PHP.LABEL,
+                                        {
+                                            style: "currency",
+                                            currency: CURRENCY.PHP.VALUE
+                                        }
+                                    )}
                                 </span>
                             </>
-                            : product?.price.toString()
+                            : product?.price.toLocaleString(
+                                CURRENCY.PHP.LABEL,
+                                {
+                                    style: "currency",
+                                    currency: CURRENCY.PHP.VALUE
+                                }
+                            )
                         }
                         /
                         {
@@ -298,7 +319,7 @@ export function card_i_component(
                                 text-white
                                 font-semibold
                                 cursor-pointer
-                            '>{numItemInCart}</span>
+                            '>{Math.min(numItemInCart, product?.amountStock?? 1)}</span>
                         </NavLink>
                     </div> 
                 </div>
@@ -310,7 +331,8 @@ export function card_i_component(
                 border-2 border-amber-800
                 ml-2 mr-2
                 mt-1 mb-1
-                pl-2 pr-2
+                pl-0 pr-0
+                sm:pl-2 sm:pr-2
                 hover:bg-amber-800/50
                 hover:text-white
                 font-semibold
@@ -330,9 +352,10 @@ export function card_i_component(
                     place-content-start
                     place-items-center">
                     <img src={product?.img.preview??''} 
-                        className="w-[3rem] h-[2.5rem]
+                        className={`hidden sm:flex w-[3rem] h-[2.5rem]
                         rounded-full border-2 border-amber-800
-                        bg-cover bg-no-repeat"/>
+                        bg-cover bg-no-repeat`
+                        }/>
                     <span className="flex
                         w-[100%]
                         place-content-start

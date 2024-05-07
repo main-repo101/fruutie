@@ -14,6 +14,9 @@ import NavBarMobileComponent from "./nav-bar-mobile-component.tsx";
 import CardIComponent from "./card-i-component.tsx";
 import simpleDBFruitAPI from "../../../resource/db/fruit.json";
 import NavPath from "../core/util/NavPath.ts";
+import { com$fruutie$core$util } from "../core/util/com$fruutie$core$util";
+
+const { CURRENCY } = com$fruutie$core$util;
 
 function header_section(
     {username = com$fruutie$core.Status.NA.VALUE, title}
@@ -249,6 +252,19 @@ function header_section(
                     sm:hidden'/>
                 </div>
             </div>
+            {/*REM: TODO_HERE; oh my.... The semantic goes haywire*/}
+            <div 
+                onClick={
+                    e => {
+                        e.preventDefault();
+                        setShowCart(false);
+                    }
+                } className={
+                (!showCart)? `flex` : `hidden` +
+                `pnl-cart w-[100%] h-[100svh] 
+                bg-transparent fixed z-10`
+                }>
+            </div>
             <div id="PNL_CART"
                 className={`flex flex-col
                 z-10
@@ -306,7 +322,7 @@ function header_section(
                     </Link>
                 </div>
                 <div className="items-selected-list flex flex-col
-                    w-[100%] h-[25rem]
+                    w-[100%] h-[18rem] sm:h-[20rem]
                     bg-white/55 rounded-xl
                     border-amber-800
                     border-4
@@ -348,16 +364,25 @@ function header_section(
                                             group-hover/item:text-amber-950
                                             ">
                                         <span className="">
-                                            Php&nbsp;
                                             {
-                                                itemPrice.toFixed(2)
+                                                itemPrice.toLocaleString(
+                                                    CURRENCY.PHP.LABEL,
+                                                    {
+                                                        style: "currency",
+                                                        currency: CURRENCY.PHP.VALUE
+                                                    }
+                                                )
                                             }
                                         </span>
                                         <span className="
                                             inline-flex
                                             text-[1.2rem]
                                             group-hover/item:text-amber-950">
-                                            {item.value}
+                                            {item.value}{ITEM?.unit??`unit`}{
+                                                ( (ITEM?.unit?? ``) === 'pc' && ( parseInt( item.value ) > 1 ) )
+                                                ? `s`
+                                                : ``
+                                            }
                                             {/* <span className="text-sm
                                                 flex place-content-center
                                                 place-items-end">
@@ -398,13 +423,21 @@ function header_section(
                 <div className="flex flex-row
                     place-content-between
                     place-items-center
-                    font-semibold text-[2rem]
+                    font-semibold
                     ease-in-out duration-500
-                    pl-0 pr-2">
+                    pl-0 pr-2
+                    text-[1.5rem]
+                    sm:text-[2rem]">
                     <div className="
                         ease-in-out duration-500">
                         <span>Your Cart</span><br/>
-                        <span>Php {totalAmount.toFixed(2)}</span>
+                        <span>Php {totalAmount.toLocaleString(
+                            "fil-PH",
+                            {
+                                style: "currency",
+                                currency: "PHP"
+                            }
+                        )}</span>
                     </div>
                     <Link
                         to={NavPath.SIGN_IN_PAGE.URL}
