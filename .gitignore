@@ -24,7 +24,8 @@ dist-ssr
 *.sw?
 
 
-docs/0.0.8/fruutie/
-docs/0.0.1/video/
+docs/product/**
+docs/0.0.8/fruutie/**
+docs/0.0.1/video/**
 
-public/repo/js/external/jquery/water-ripples/
+public/repo/js/external/jquery/**
