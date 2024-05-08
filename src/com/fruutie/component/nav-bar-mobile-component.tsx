@@ -6,14 +6,24 @@ import { scroll_to_section } from '../core/util/scroll-to-section';
 
 export function nav_bar_mobile_component(
     {
-        className
+        className,
+        isShowMobileMenu,
+        onClick
     }:
     {
-        className?:string
+        className?:string,
+        isShowMobileMenu?:boolean
+        onClick?:(() => void)
     }
 ): React.ReactElement {
-
     const [ isMenuClick, setIsMenuClick ] = useState(false);
+
+    React.useEffect(
+        ()=>{
+            setIsMenuClick(isShowMobileMenu?? false);
+        },
+        [isShowMobileMenu]
+    )
     return <>
         <div id="NAV_BAR_MOBILE_COMPONENT"
             className={`
@@ -26,6 +36,7 @@ export function nav_bar_mobile_component(
                 onClick={
                     e=>{
                         e.preventDefault();
+                        onClick && onClick();
                         setIsMenuClick(prev=>!prev);
                     }
                 }
@@ -45,7 +56,27 @@ export function nav_bar_mobile_component(
             {
                 isMenuClick
                 ?
+                // absolute flex flex-col
+                // place-content-center
+                // place-items-center
+                // mt-[32rem]
+                // mr-[calc(100vw-20rem)]
+                // -ml-[12rem]
+                // pb-[2rem]
+                // w-[100vw]
+                // h-[50svh]
+                // bg-amber-100
+                // border-2
+                // border-amber-800
+                // pl-[1rem]
+                // pr-[1rem]
+                // text-center
+                // rounded-br-[10rem]
+                // rounded-bl-[10rem]
+                // text-xl font-semibold
                 <div className='
+                
+                    z-[100]
                     absolute flex flex-col
                     place-content-center
                     place-items-center
@@ -63,7 +94,6 @@ export function nav_bar_mobile_component(
                     text-center
                     rounded-br-[10rem]
                     rounded-bl-[10rem]
-
                     text-xl font-semibold'>
                     <Link to='/'
                         className='
@@ -72,8 +102,9 @@ export function nav_bar_mobile_component(
                         hover:text-amber-100
                         pt-2 pb-2'
                         onClick={ () => {
-                                setIsMenuClick(prev=>!prev)
-                                scroll_to_section('HOME_PAGE',200)
+                                setIsMenuClick(prev=>!prev);
+                                onClick && onClick();
+                                scroll_to_section('HOME_PAGE',200);
                             }
                         }>
                         Home
@@ -85,8 +116,9 @@ export function nav_bar_mobile_component(
                         hover:text-amber-100
                         pt-2 pb-2'
                         onClick={ () => {
-                                setIsMenuClick(prev=>!prev)
-                                scroll_to_section('PRODUCT_PAGE',200)
+                                setIsMenuClick(prev=>!prev);
+                                onClick && onClick();
+                                scroll_to_section('PRODUCT_PAGE',200);
                             }
                         }>
                         Product
@@ -98,8 +130,9 @@ export function nav_bar_mobile_component(
                         hover:text-amber-100
                         pt-2 pb-2'
                         onClick={ () => {
-                                setIsMenuClick(prev=>!prev)
-                                scroll_to_section('SERVICE_PAGE',200)
+                                setIsMenuClick(prev=>!prev);
+                                onClick && onClick();
+                                scroll_to_section('SERVICE_PAGE',200);
                             }
                         }>
                         Services
@@ -111,8 +144,9 @@ export function nav_bar_mobile_component(
                         hover:text-amber-100
                         pt-2 pb-2'
                         onClick={ () => {
-                                setIsMenuClick(prev=>!prev)
-                                scroll_to_section('ABOUT_US_PAGE',200)
+                                setIsMenuClick(prev=>!prev);
+                                onClick && onClick();
+                                scroll_to_section('ABOUT_US_PAGE',200);
                             }
                         }>
                         About-Us

@@ -23,6 +23,7 @@ function header_section(
     :{username?:string|null, title?:string|null|undefined}
 ): JSX.Element {
     console.log(`::: /src/com/fruutie/component/header-section.tsx: title=${title}`);
+    const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [showCart, setShowCart] = useState(false);
     const [windowSize, setWindowSize] = useState<{ width: number; height: number }>({
             width: window.innerWidth,
@@ -94,6 +95,22 @@ function header_section(
     
     return (
         <>
+        
+            {
+                showMobileMenu && <div className="
+                    pnl-mobile-menu
+                    absolute 
+                    z-[50] w-[100%] h-[100%]
+                    bg-transparent
+                    blur-sm
+                    backdrop-blur-sm"
+                    onClick={
+                        e=>{
+                            e.preventDefault();
+                            setShowMobileMenu(false);
+                        }
+                    }></div>
+            }
             <div className='
                 header
                 select-none
@@ -246,7 +263,13 @@ function header_section(
                         ease-in-out duration-500'/>
                     <NavBarComponent className='hidden 
                     sm:inline-flex'/>
-                    <NavBarMobileComponent className='flex
+                    <NavBarMobileComponent 
+                        onClick={()=>{
+                            setShowCart(false);
+                            setShowMobileMenu(prev=> !prev);
+                        }} 
+                        isShowMobileMenu={showMobileMenu}
+                        className='flex
                     place-content-center
                     place-items-center
                     sm:hidden'/>
@@ -303,8 +326,10 @@ function header_section(
                     <Link
                         to={NavPath.SIGN_IN_PAGE.URL}
                         onClick={
-                            ()=>
-                            scroll_to_section(NavPath.SIGN_IN_PAGE.ID_ATTR, 200)
+                            ()=> {
+                                scroll_to_section(NavPath.SIGN_IN_PAGE.ID_ATTR, 200);
+                                setShowCart(false)
+                            }
                         }
                         className="btn-view-cart
                         bg-lime-400

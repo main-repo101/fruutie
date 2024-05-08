@@ -33,12 +33,6 @@ export namespace com$fruutie$core$util {
             ID_ATTR: 'ABOUT_US_PAGE',
             DESCRIPTION: 'ABOUT_US_PAGE'
         });
-        public static readonly SIGN_IN_PAGE : Readonly<INavPath> = Object.freeze({
-            CODE: 0b0010_0000,
-            URL: '/sign-in',
-            ID_ATTR: 'SIGN_IN_PAGE',
-            DESCRIPTION: 'SIGN_IN_PAGE'
-        });
         public static readonly ABOUT_US_INTRO : Readonly<INavPath> = Object.freeze({
             CODE: 0b0010_0000,
             URL: '/about-us#ABOUT_INTRO',
@@ -98,6 +92,18 @@ export namespace com$fruutie$core$util {
             URL: '/product/more/on-sale',
             ID_ATTR: 'MORE_PRODUCT_PAGE',
             DESCRIPTION: 'On Sale Product HASH_ID'
+        });
+        public static readonly SIGN_IN_PAGE : Readonly<INavPath> = Object.freeze({
+            CODE: 0b1100_0001,
+            URL: '/sign-in',
+            ID_ATTR: 'SIGN_IN_PAGE',
+            DESCRIPTION: 'SIGN_IN_PAGE'
+        });
+        public static readonly SIGN_UP_PAGE : Readonly<INavPath> = Object.freeze({
+            CODE: 0b1100_0010,
+            URL: '/sign-up',
+            ID_ATTR: 'SIGN_UP_PAGE',
+            DESCRIPTION: 'SIGN_UP_PAGE'
         });
     }
 }
