@@ -351,11 +351,13 @@ export function card_i_component(
                     cursor-pointer
                     place-content-start
                     place-items-center">
-                    <img src={product?.img.preview??''} 
-                        className={`hidden sm:flex w-[3rem] h-[2.5rem]
-                        rounded-full border-2 border-amber-800
-                        bg-cover bg-no-repeat`
-                        }/>
+                    <div>
+                        <img src={product?.img.preview??''} 
+                            className={`hidden sm:flex w-[3rem] h-[2.5rem]
+                            rounded-full border-2 border-amber-800
+                            bg-cover bg-no-repeat`
+                            }/>
+                    </div>
                     <span className="flex
                         w-[100%]
                         place-content-start

@@ -142,6 +142,7 @@ function header_section(
                         <FaCartShopping 
                             onClick={(e)=>{
                                 e.preventDefault();
+                                setShowMobileMenu(false);
                                 setShowCart(prevData=> !prevData );
                                 totalAmount = 0;
                             }}
@@ -210,6 +211,7 @@ function header_section(
                                         onClick={()=>{
                                             scroll_to_section('SIGN_IN_PAGE',200);
                                             setShowCart(false);
+                                            setShowMobileMenu(false);
                                         }}
                                         to='/sign-in'
                                         className='pl-2 pr-2
@@ -223,6 +225,7 @@ function header_section(
                                         onClick={()=>{
                                             scroll_to_section('SIGN_UP_PAGE',200);
                                             setShowCart(false);
+                                            setShowMobileMenu(false);
                                         }}
                                         to='/sign-up'
                                         className='pl-2 pr-2
@@ -328,7 +331,7 @@ function header_section(
                         onClick={
                             ()=> {
                                 scroll_to_section(NavPath.SIGN_IN_PAGE.ID_ATTR, 200);
-                                setShowCart(false)
+                                setShowCart(false);
                             }
                         }
                         className="btn-view-cart
@@ -368,12 +371,31 @@ function header_section(
                                 totalAmount += itemPrice;
                                 return <>
                                     <div
+                                        onClick={e=>{
+                                            e.preventDefault();
+                                            // setShowCart(false);
+                                        }}
                                         className="inline-flex relative
                                         group/item w-[100%]">
-                                        <CardIComponent
-                                            key={index}
-                                            product={ITEM}
-                                            isOnCart={true}/>
+                                        <div 
+                                            onClick={
+                                                e => {
+                                                    e.preventDefault();
+                                                    setShowCart(false);
+                                                }
+                                            }
+                                            className="
+                                            top-1
+                                            left-1
+                                            w-[100%]
+                                            h-[100%]
+                                            rounded-none
+                                            ">
+                                            <CardIComponent
+                                                key={index}
+                                                product={ITEM}
+                                                isOnCart={true}/>
+                                        </div>
                                         <div className="
                                             flex
                                             gap-6
@@ -468,6 +490,7 @@ function header_section(
                         to={NavPath.SIGN_IN_PAGE.URL}
                         onClick={()=>{
                             scroll_to_section(NavPath.SIGN_IN_PAGE.ID_ATTR, 200);
+                            setShowCart(false);
                         }}
                         className="
                         btn-check-out

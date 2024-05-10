@@ -2,6 +2,8 @@ import { Outlet } from 'react-router-dom';
 import HeaderSection from '../header-section.tsx';
 import FooterSection from '../footer-section.tsx';
 import { com$fruutie$core } from '../../core/com$fruutie$core.ts';
+import ToTop from '../to-top.tsx';
+import MessageComponent from '../chat/message-component.tsx';
 
 const NA_STATUS = com$fruutie$core.Status.NA.VALUE;
 
@@ -39,6 +41,23 @@ function main_layout(
                     </span>
                 </div>
                 <Outlet/>
+                <div className="
+                    flex
+                    place-contetn-center
+                    place-items-end
+                    sm:flex-row
+                    flex-col
+                    fixed
+                    bottom-4
+                    right-0
+                    sm:bottom-6
+                    sm:right-6
+                    z-[5]
+                    w-fit
+                    ">
+                    <MessageComponent className=""/>
+                    <ToTop/>
+                </div>
                 <FooterSection/>
             </div>
         </>
