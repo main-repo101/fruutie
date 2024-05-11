@@ -1002,7 +1002,7 @@
         },
         "isOutOfStock": true,
         "amountStock": 98,
-        "isOnSale": false,
+        "isOnSale": true,
         "onSalePrice": 25,
         "price": 35,
         "unit": "lb",

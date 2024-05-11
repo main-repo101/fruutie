@@ -1,21 +1,16 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import simpleDbFruitAPI from "../../../../resource/db/fruit.json";
 import CardIComponent from "../card-i-component";
+import NoRecordComponent from "../no-record-component";
+import { searchProduct as searchProductx } from "../search-component";
 
 //REM: we might re-use the 'more-product-page.tsx' instead of creating new page for this.
 //REM: Refactor it later.
 export function search_product_page(): React.ReactElement {
     const { searchProduct } = useParams();
 
-    const SIMPLE_DB_FRUIT_API = simpleDbFruitAPI.filter(item => {
-        return (
-            item.name.toLowerCase().includes(searchProduct!.trim().toLowerCase()) 
-            || item.producer.some(producer => producer.toLowerCase().includes(searchProduct!.trim().toLowerCase())) 
-            || item.tag.some(tag => tag.toLowerCase().includes(searchProduct!.trim().toLowerCase()))
-        );
-    });
-      
+    const SIMPLE_DB_FRUIT_API = searchProductx( searchProduct?? `` );
+
 
     return <>
         <div id="SEARCH_PRODUCT_PAGE" 
@@ -37,7 +32,8 @@ export function search_product_page(): React.ReactElement {
                 place-items-center
                 place-content-evenly">
                 {
-                    SIMPLE_DB_FRUIT_API.map(
+                    SIMPLE_DB_FRUIT_API.length > 0
+                    ?SIMPLE_DB_FRUIT_API.map(
                         (item, id)=>{
                             return<>
                                 <CardIComponent
@@ -48,6 +44,7 @@ export function search_product_page(): React.ReactElement {
                             </>;
                         }
                     )
+                    : <NoRecordComponent/>
                 }
             </div>
         </div>

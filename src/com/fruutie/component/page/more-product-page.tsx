@@ -5,6 +5,9 @@ import CardIComponent from "../card-i-component";
 import simpleDbFruitAPI from '../../../../resource/db/fruit.json';
 import React from "react";
 
+import { IProduct } from "../../core/model/IProduct.mjs";
+import NoRecordComponent from "../no-record-component";
+
 export function more_product_page(
     {
         tags
@@ -15,6 +18,8 @@ export function more_product_page(
 ): JSX.Element {
 
     const { groupProduct } = useParams();
+    const [ getPossibleSearchedProduct, setPossibleSearchedProduct ]
+        = React.useState<IProduct[]>([]);
     React.useEffect(() => {
         document.title = `${document.title.split('~')[0]} ~ More Product`;
         return () => {
@@ -23,7 +28,17 @@ export function more_product_page(
     }, []);
     // groupProduct = groupProduct || useSearchParams()[0].get('txtSearch')!;
     const targetTags = tags?.join(' ') || groupProduct;
-    console.log( targetTags );
+
+    React.useEffect( ()=> {
+        setPossibleSearchedProduct(
+            simpleDbFruitAPI.filter(dbItem =>
+                targetTags?.toLocaleLowerCase().split(' ').some(targetTag =>
+                    dbItem.tag.some(i => i.toLowerCase().includes(targetTag.replace('-', ' '))) ||
+                    dbItem.name.trim().toLowerCase().includes(targetTag.trim().toLowerCase())
+                )
+            )
+        );
+    }, [groupProduct]);
     return <>
         <div id='MORE_PRODUCT_PAGE' className='flex flex-col
             p-6
@@ -40,10 +55,11 @@ export function more_product_page(
                 {
                     groupProduct?.split(' ').map((tag, index) => (
                         <Link
+                            key={index}
                             className="hover:text-amber-800
                             duration-500 ease-in-out
                             text-[1.1rem]" 
-                            to={`/product/more/${tag}`} key={index}>
+                            to={`/product/more/${tag}`}>
                             {index > 0 && ', '}
                             {tag.toLowerCase()}
                         </Link>
@@ -72,19 +88,20 @@ export function more_product_page(
                     //         }
                     //     )
                     // )
-                    simpleDbFruitAPI.filter(dbItem =>
-                        targetTags?.split(' ').some(targetTag =>
-                            dbItem.tag.includes(targetTag.replace('-', ' '))
-                        )
-                    ).map((item) => {
+                    (getPossibleSearchedProduct.length > 0)
+                    ? getPossibleSearchedProduct
+                    .map((item, index) => {
                         return (
+                            <>
                             <CardIComponent
-                                key={item.id}
+                                key={index}
                                 product={item}
                                 isOnCart={false}
                             />
+                            </>
                         );
                     })
+                    : <NoRecordComponent/>
                 }
             </div>
         </div>

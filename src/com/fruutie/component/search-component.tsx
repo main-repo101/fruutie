@@ -1,13 +1,27 @@
 // import { FaSearch } from "react-icons/fa";
 import { GoSearch } from "react-icons/go";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { scroll_to_section } from "../core/util/scroll-to-section";
-
 import simpleDbFruitAPI from "../../../resource/db/fruit.json";
 
 import IProduct from "../core/model/IProduct.mts";
 import { FaEye } from "react-icons/fa6";
+
+export function searchProduct(searchQuery: string): IProduct[] {
+    const normalizedQuery = searchQuery.trim().toLowerCase();
+    const keywords = normalizedQuery.split(' ').map(keyword => keyword.toLowerCase());
+
+    return simpleDbFruitAPI.filter(item => {
+        return keywords.some(keyword => {
+            return (
+                item.name.toLowerCase().includes(keyword) ||
+                item.producer.some(producer => producer.toLowerCase().includes(keyword)) ||
+                item.tag.some(tag => tag.toLowerCase().includes(keyword))
+            );
+        });
+    });
+}
 
 function search_component( {
     className
@@ -16,6 +30,14 @@ function search_component( {
 }): JSX.Element {
     const [ txtSearch, setTxtSearch ] = useState('');
     const [ probableSearch, setProbableSearch ] = useState(Array<IProduct>);
+    let navigate = useNavigate();
+    const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>): boolean => {
+        if (event.key === 'Enter' && txtSearch.trim().length > 0 ) {
+            navigate(`/search/${txtSearch}`);
+            return true;
+        }
+        return false;
+    };
 
     // function searchProduct(searchQuery: string): IProduct[] {
     //     const normalizedQuery = searchQuery.trim().toLowerCase();
@@ -28,23 +50,6 @@ function search_component( {
     //     );
     // }
     
-    
-    function searchProduct(searchQuery: string): IProduct[] {
-        const normalizedQuery = searchQuery.trim().toLowerCase();
-        const keywords = normalizedQuery.split(' ').map(keyword => keyword.toLowerCase());
-    
-        return simpleDbFruitAPI.filter(item => {
-            return keywords.some(keyword => {
-                return (
-                    item.name.toLowerCase().includes(keyword) ||
-                    item.producer.some(producer => producer.toLowerCase().includes(keyword)) ||
-                    item.tag.some(tag => tag.toLowerCase().includes(keyword))
-                );
-            });
-        });
-    }
-    
-
     return (
         <>
             <div className={`${className}
@@ -63,6 +68,12 @@ function search_component( {
                         placeholder="Search fruit name, tag, producer..."
                         autoComplete="off"
                         value={txtSearch}
+                        onKeyDown={
+                            e=>{
+                                handleKeyPress(e) &&
+                                (e.target as HTMLInputElement).blur();
+                            }
+                        }
                         onChange={e=>{
                             e.preventDefault();
                             setTxtSearch( e.target.value );

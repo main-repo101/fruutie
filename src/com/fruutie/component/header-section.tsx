@@ -371,6 +371,7 @@ function header_section(
                                 totalAmount += itemPrice;
                                 return <>
                                     <div
+                                        key={index}
                                         onClick={e=>{
                                             e.preventDefault();
                                             // setShowCart(false);
@@ -392,11 +393,11 @@ function header_section(
                                             rounded-none
                                             ">
                                             <CardIComponent
-                                                key={index}
                                                 product={ITEM}
                                                 isOnCart={true}/>
                                         </div>
-                                        <div className="
+                                        <div 
+                                            className="
                                             flex
                                             gap-6
                                             absolute
@@ -410,34 +411,37 @@ function header_section(
                                             text-[1.2rem]
                                             group-hover/item:text-amber-950
                                             ">
-                                        <span className="">
-                                            {
-                                                itemPrice.toLocaleString(
-                                                    CURRENCY.PHP.LABEL,
-                                                    {
-                                                        style: "currency",
-                                                        currency: CURRENCY.PHP.VALUE
-                                                    }
-                                                )
-                                            }
-                                        </span>
-                                        <span className="
-                                            inline-flex
-                                            text-[1.2rem]
-                                            group-hover/item:text-amber-950">
-                                            {item.value}{ITEM?.unit??`unit`}{
-                                                ( (ITEM?.unit?? ``) === 'pc' && ( parseInt( item.value ) > 1 ) )
-                                                ? `s`
-                                                : ``
-                                            }
-                                            {/* <span className="text-sm
-                                                flex place-content-center
-                                                place-items-end">
-                                                {ITEM?.unit}
-                                            </span> */}
-                                        </span>
+                                            <span 
+                                                className="">
+                                                {
+                                                    itemPrice.toLocaleString(
+                                                        CURRENCY.PHP.LABEL,
+                                                        {
+                                                            style: "currency",
+                                                            currency: CURRENCY.PHP.VALUE
+                                                        }
+                                                    )
+                                                }
+                                            </span>
+                                            <span 
+                                                className="
+                                                inline-flex
+                                                text-[1.2rem]
+                                                group-hover/item:text-amber-950">
+                                                {item.value}{ITEM?.unit??`unit`}{
+                                                    ( (ITEM?.unit?? ``) === 'pc' && ( parseInt( item.value ) > 1 ) )
+                                                    ? `s`
+                                                    : ``
+                                                }
+                                                {/* <span className="text-sm
+                                                    flex place-content-center
+                                                    place-items-end">
+                                                    {ITEM?.unit}
+                                                </span> */}
+                                            </span>
                                         </div>
-                                        <span className="
+                                        <span 
+                                            className="
                                             absolute
                                             right-4
                                             top-5
