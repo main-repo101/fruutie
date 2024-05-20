@@ -70,8 +70,11 @@ function search_component( {
                         value={txtSearch}
                         onKeyDown={
                             e=>{
-                                handleKeyPress(e) &&
-                                (e.target as HTMLInputElement).blur();
+                                if( handleKeyPress(e) ) {
+                                    (e.target as HTMLInputElement).blur();
+                                    scroll_to_section("SEARCH_PRODUCT_PAGE", 200);
+                                }
+
                             }
                         }
                         onChange={e=>{

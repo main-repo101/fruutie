@@ -10,43 +10,71 @@ import NavPath from "../../core/util/NavPath.ts";
 import CardIComponent from "../card-i-component.tsx";
 import React from "react";
 
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-function home_page( {title = com$fruutie$core.Status.NA.VALUE }:{title?: string | null} ): JSX.Element {
+function home_page({ title = com$fruutie$core.Status.NA.VALUE }: { title?: string | null }): JSX.Element {
 
-    React.useEffect(() => {
-      document.title = `${title} ~ Home`;
-      return () => {
-          document.title = `${title ?? 'Empty'}`;
-      };
-    }, []);
+  React.useEffect(() => {
+    document.title = `${title} ~ Home`;
+    return () => {
+      document.title = `${title ?? 'Empty'}`;
+    };
+  }, []);
+  const responsive = {
+    desktop: {
+      breakpoint: {
+        max: 3000,
+        min: 1024
+      },
+      items: 5,
+      partialVisibilityGutter: 40
+    },
+    mobile: {
+      breakpoint: {
+        max: 590,
+        min: 0
+      },
+      items: 1,
+      partialVisibilityGutter: 30
+    },
+    tablet: {
+      breakpoint: {
+        max: 1024,
+        min: 590
+      },
+      items: 3,
+      partialVisibilityGutter: 30
+    }
+  };
 
-    // const HOT_PRODUCT = hotProduct.flat().splice(0,Math.min(4,hotProduct.length));
-    // const ON_SALE_PRODUCT = onSaleProduct.flat().slice(0, Math.min(4, onSaleProduct.length));
-    console.log(`::: Home page.`);
-    return (
-      <>
-        <div id='HOME_PAGE' className='
+  // const HOT_PRODUCT = hotProduct.flat().splice(0,Math.min(4,hotProduct.length));
+  // const ON_SALE_PRODUCT = onSaleProduct.flat().slice(0, Math.min(4, onSaleProduct.length));
+  console.log(`::: Home page.`);
+  return (
+    <>
+      <div id='HOME_PAGE' className='
           w-[100%] max-h-fit relative
           transition-all transform'>
-          <HeroSection title={title} className='
+        <HeroSection title={title} className='
           w-[100%] h-[calc(100vh/1.2)] -mt-[10rem]'/>
-          <div className="hot-product
+        <div className="hot-product
             flex flex-col
             place-content-center
             place-items-center
             pt-6 pb-6">
-            <Link 
-              to={NavPath.PRODUCT_HOT.URL} 
-              onClick={
-                ()=>{
-                  scroll_to_section(NavPath.PRODUCT_HOT.ID_ATTR, 200)
-                }
+          <Link
+            to={NavPath.PRODUCT_HOT.URL}
+            onClick={
+              () => {
+                scroll_to_section(NavPath.PRODUCT_HOT.ID_ATTR, 200)
               }
-              className='text-4xl md:text-5xl font-semibold
+            }
+            className='text-4xl md:text-5xl font-semibold
               p-4 text-amber-800
               hover:text-amber-600
               ease-in-out duration-500'>Hot Product</Link>
-            <div className="flex flex-col
+          {/* <div className="flex flex-col
               w-[100%]
               pl-[10%] pr-[10%]
               flex-wrap
@@ -54,28 +82,58 @@ function home_page( {title = com$fruutie$core.Status.NA.VALUE }:{title?: string 
               sm:gap-4
               place-content-evenly
               place-items-center
-              sm:flex-row">
-              {simpleDbFruitAPI
+              sm:flex-row"> */}
+              <Carousel
+            // customLeftArrow={<ArrowLeft />}
+            // customRightArrow={<ArrowRight/>}
+            additionalTransfrom={0}
+            arrows
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className=""
+            containerClass="container"
+            dotListClass=""
+            draggable={false}
+            focusOnSelect={false}
+            infinite={true}
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            pauseOnHover={true}
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={responsive}
+            rewind={false}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable={true}
+          >
+            {simpleDbFruitAPI
               .filter(
                 item => item.tag.includes('hot product')
               )
               .slice(
                 0,
                 Math.min(
-                  4,
+                  8,
                   simpleDbFruitAPI.length
                 )
               )
-              .map((item, index)=>(
-                <CardIComponent key={index} product={item} isOnCart={false}/>
+              .map((item, index) => (
+                <CardIComponent key={index} product={item} isOnCart={false} />
               ))}
-            </div>
-            <Link 
-              onClick={()=>
-                scroll_to_section('MORE_PRODUCT_PAGE', 200)
-              }
-              to='/product/more/hot-product'
-              className="see-more
+          </Carousel>
+          <Link
+            onClick={() =>
+              scroll_to_section('MORE_PRODUCT_PAGE', 200)
+            }
+            to='/product/more/hot-product'
+            className="see-more
               inline-flex flex-wrap
               place-content-center
               place-items-center
@@ -91,51 +149,83 @@ function home_page( {title = com$fruutie$core.Status.NA.VALUE }:{title?: string 
               hover:border-amber-100
               rounded-full
               ease-in-out duration-300">
-              See more...
-            </Link>
-          </div>
-          <div className='
+            See more...
+          </Link>
+        </div>
+        <div className='
             ml-[10%] mr-[10%]
             border-2 
             border-solid 
             border-amber-600'>
-          </div>
-          <div className="on-sale-product
+        </div>
+        <div className="on-sale-product
             flex flex-col
             place-content-center
             place-items-center
             pt-6 pb-6">
-            <Link 
-              to={NavPath.PRODUCT_ON_SALE.URL} 
-              onClick={
-                ()=>{
-                  scroll_to_section(NavPath.PRODUCT_ON_SALE.ID_ATTR, 200)
-                }
-              } 
-              className='text-4xl md:text-5xl font-semibold
+          <Link
+            to={NavPath.PRODUCT_ON_SALE.URL}
+            onClick={
+              () => {
+                scroll_to_section(NavPath.PRODUCT_ON_SALE.ID_ATTR, 200)
+              }
+            }
+            className='text-4xl md:text-5xl font-semibold
               p-4 text-amber-800
               hover:text-amber-600
               ease-in-out duration-500'>On Sale</Link>
-            <div className="flex flex-col
+          {/* <Carousel 
+              responsive={responsive}
+              className="flex flex-col
               w-[100%]
               pl-[10%] pr-[10%]
               flex-wrap
-              gap-8
-              sm:gap-4
+              gap-4
+              sm:gap-8
               place-content-evenly
               place-items-center
-              sm:flex-row">
-              {simpleDbFruitAPI
+              sm:flex-row"> */}
+          <Carousel
+            // customLeftArrow={<ArrowLeft />}
+            // customRightArrow={<ArrowRight/>}
+            additionalTransfrom={0}
+            arrows
+            autoPlaySpeed={3000}
+            centerMode={false}
+            className=""
+            containerClass="container"
+            dotListClass=""
+            draggable={false}
+            focusOnSelect={false}
+            infinite={true}
+            itemClass=""
+            keyBoardControl
+            minimumTouchDrag={80}
+            pauseOnHover={true}
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={responsive}
+            rewind={false}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable={true}
+          >
+            {simpleDbFruitAPI
               .filter(
                 item => item.tag.includes('on sale')
               )
               .slice(
                 0,
                 Math.min(
-                  4,
+                  8,
                   simpleDbFruitAPI.length
                 )
-              ).map((item, index)=>{
+              ).map((item, index) => {
                 // return (<CardComponent key={index} productName={item.name}
                 //   productId={item.id}
                 //   img={item.img.preview}
@@ -144,15 +234,15 @@ function home_page( {title = com$fruutie$core.Status.NA.VALUE }:{title?: string 
                 //   onSalePrice={item.onSalePrice}
                 //   price={item.price}
                 //   unit={item.unit}/>);
-                return <CardIComponent key={index} product={item} isOnCart={false}/>
+                return <CardIComponent key={index} product={item} isOnCart={false} />
               })}
-            </div>
-            <Link 
-              onClick={()=>
-                scroll_to_section('MORE_PRODUCT_PAGE', 200)
-              }
-              to='/product/more/on-sale'
-              className="see-more
+          </Carousel>
+          <Link
+            onClick={() =>
+              scroll_to_section('MORE_PRODUCT_PAGE', 200)
+            }
+            to='/product/more/on-sale'
+            className="see-more
               inline-flex flex-wrap
               place-content-center
               place-items-center
@@ -168,12 +258,12 @@ function home_page( {title = com$fruutie$core.Status.NA.VALUE }:{title?: string 
               hover:border-amber-100
               rounded-full
               ease-in-out duration-300">
-              See more...
-            </Link>
-          </div>
+            See more...
+          </Link>
         </div>
-      </>
-    );
+      </div>
+    </>
+  );
 }
 
 const HomePage = home_page;
